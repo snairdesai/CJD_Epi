@@ -62,6 +62,7 @@ head(raw_nmr_panel_b_gender)
 clean_dfs <- function(raw_dat, icd_input) {
     
     clean_dat <- raw_dat %>% 
+        
         # Renaming variables.
         dplyr::rename(time_period = `Year`,
                       raw_death_count = `Deaths`,
@@ -74,6 +75,7 @@ clean_dfs <- function(raw_dat, icd_input) {
                       age_adj_death_rate_ci_low = `Age Adjusted Rate Lower 95% Confidence Interval`,
                       age_adj_death_rate_ci_hi = `Age Adjusted Rate Upper 95% Confidence Interval`,
                       time_period_death_share = `% of Total Deaths`) %>%
+        
         # Initializing variable for ICD-code based on specified inputs and
         # formatting numeric values.
         dplyr::mutate(!!icd_code := icd_input,
@@ -91,6 +93,8 @@ clean_dfs <- function(raw_dat, icd_input) {
     return(as.data.frame(clean_dat))
 
 }
+
+# Applying our cleaning function to the relevant dataframes...
 
 # First, for our overall national and state totals.
 cleaned_nmr_panel_a_totals <- clean_dfs(raw_dat = raw_nmr_panel_a_totals, icd_input = "B94.8")
