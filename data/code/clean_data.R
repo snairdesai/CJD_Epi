@@ -31,7 +31,7 @@ raw_nmr_panel_a_totals <- read.csv("raw/nmr_panel_a_totals.csv")
 cat("Overall national mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_totals)
 
-raw_nmr_panel_b_totals <- read.csv("raw/smr_panel_b_totals.csv")
+raw_nmr_panel_b_totals <- read.csv("raw/nmr_panel_b_totals.csv")
 cat("Overall national mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_totals)
 
@@ -49,7 +49,7 @@ raw_nmr_panel_a_gender <- read.csv("raw/nmr_panel_a_gender.csv")
 cat("National mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_gender)
 
-raw_nmr_panel_b_gender <- read.csv("raw/smr_panel_b_gender.csv")
+raw_nmr_panel_b_gender <- read.csv("raw/nmr_panel_b_gender.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_gender)
 
@@ -60,37 +60,48 @@ head(raw_nmr_panel_b_gender)
 # ---------------------------------------------------------------- #
 
 clean_dfs <- function(raw_dat, icd_input) {
-    
+
+    # Defining a match list for our totals across time periods.
+    match_list <- c("1999 - 2006", "2007 - 2020")
+
+    # Generating a new cleaned dataframe.
     clean_dat <- raw_dat %>% 
         
         # Renaming variables.
         dplyr::rename(time_period = `Year`,
                       raw_death_count = `Deaths`,
                       us_time_period_pop = `Population`,
-                      raw_death_rate = `Crude Rate`,
-                      raw_death_rate_ci_low = `Crude Rate Lower 95% Confidence Interval`,
-                      raw_death_rate_ci_hi = `Crude Rate Upper 95% Confidence Interval`,
-                       = `Crude Rate Standard Error`,
-                      age_adj_death_rate = `Age Adjusted Rate`,
-                      age_adj_death_rate_ci_low = `Age Adjusted Rate Lower 95% Confidence Interval`,
-                      age_adj_death_rate_ci_hi = `Age Adjusted Rate Upper 95% Confidence Interval`,
-                      time_period_death_share = `% of Total Deaths`) %>%
+                      raw_death_rate = `Crude.Rate`,
+                      raw_death_rate_ci_low = `Crude.Rate.Lower.95..Confidence.Interval`,
+                      raw_death_rate_ci_hi = `Crude.Rate.Upper.95..Confidence.Interval`,
+                      raw_death_rate_se = `Crude.Rate.Standard.Error`,
+                      age_adj_death_rate = `Age.Adjusted.Rate`,
+                      age_adj_death_rate_ci_low = `Age.Adjusted.Rate.Lower.95..Confidence.Interval`,
+                      age_adj_death_rate_ci_hi = `Age.Adjusted.Rate.Upper.95..Confidence.Interval`,
+                      age_adj_death_rate_se = `Age.Adjusted.Rate.Standard.Error`,
+                      time_period_death_share = `X..of.Total.Deaths`) %>%
         
+        # Replacing missing values with NAs.
+        dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
+
         # Initializing variable for ICD-code based on specified inputs and
         # formatting numeric values.
-        dplyr::mutate(!!icd_code := icd_input,
+        dplyr::mutate(icd_code = icd_input,
                       us_time_period_pop = format(as.numeric(us_time_period_pop), big.mark = ","),
-                      raw_death_rate = raw_death_rate * 100,
-                      raw_death_rate_ci_low = raw_death_rate_ci_low * 100,
-                      raw_death_rate_ci_hi = raw_death_rate_ci_hi * 100,
-                      raw_death_rate_se = raw_death_rate_se * 100,
-                      age_adj_death_rate = age_adj_death_rate * 100,
-                      age_adj_death_rate_ci_low = age_adj_death_rate_ci_low * 100,
-                      age_adj_death_rate_ci_hi = age_adj_death_rate_ci_hi * 100,
-                      time_period_death_share = readr::parse_number(time_period_death_share))
+                      raw_death_rate = as.numeric(raw_death_rate) * 100,
+                      raw_death_rate_ci_low = as.numeric(raw_death_rate_ci_low) * 100,
+                      raw_death_rate_ci_hi = as.numeric(raw_death_rate_ci_hi) * 100,
+                      raw_death_rate_se = as.numeric(raw_death_rate_se) * 100,
+                      age_adj_death_rate = as.numeric(age_adj_death_rate) * 100,
+                      age_adj_death_rate_ci_low = as.numeric(age_adj_death_rate_ci_low) * 100,
+                      age_adj_death_rate_ci_hi = as.numeric(age_adj_death_rate_ci_hi) * 100,
+                      age_adj_death_rate_se = as.numeric(age_adj_death_rate_se) * 100,
+                      time_period_death_share = readr::parse_number(time_period_death_share)) %>%
     
-    cat(paste0("Completed cleaning process for...", raw_dat, "\n"))
-    return(as.data.frame(clean_dat))
+        # Reordering dataframe rows so totals across time periods are at bottom.
+        dplyr::arrange(time_period %in% match_list)
+
+        return(as.data.frame(clean_dat))
 
 }
 
@@ -103,9 +114,27 @@ cleaned_nmr_panel_b_totals <- clean_dfs(raw_dat = raw_nmr_panel_b_totals, icd_in
 cleaned_smr_panel_a_totals <- clean_dfs(raw_dat = raw_smr_panel_a_totals, icd_input = "B94.8")
 cleaned_smr_panel_b_totals <- clean_dfs(raw_dat = raw_smr_panel_b_totals, icd_input = "A81.0")
 
+# Completing final renames for state-level data.
+cleaned_smr_panel_a_totals <- cleaned_smr_panel_a_totals %>%
+    dplyr::rename(state = `State`,
+                  state_code = `State.Code`)
+
+cleaned_smr_panel_b_totals <- cleaned_smr_panel_b_totals %>%
+    dplyr::rename(state = `State`,
+                  state_code = `State.Code`)
+
 # Next, for our national totals split by gender.
 cleaned_nmr_panel_a_gender <- clean_dfs(raw_dat = raw_nmr_panel_a_gender, icd_input = "B94.8")
-cleaned_nmr_panel_b_gender <- clean_dfs(imp_df = raw_nmr_panel_b_gender, icd_input = "A81.0")
+cleaned_nmr_panel_b_gender <- clean_dfs(raw_dat = raw_nmr_panel_b_gender, icd_input = "A81.0")
+
+# Completing final renames for national data by gender.
+raw_nmr_panel_a_gender <- raw_nmr_panel_a_gender %>%
+    dplyr::rename(gender = `Gender`)
+
+raw_nmr_panel_b_gender <- raw_nmr_panel_b_gender %>%
+    dplyr::rename(gender = `Gender`)
+
+cat("Completed cleaning process ... \n")
 
 # ---------------------------------------------------------------- #
 
@@ -128,7 +157,9 @@ Hmisc::describe(cleaned_nmr_totals)
 skimr::skim(cleaned_nmr_totals)
 saved_x11_option <- st_options("use.x11")
 st_options(use.x11 = TRUE)
-view(summarytools::dfSummary(cleaned_nmr_totals))
+
+# Uncomment this line to view the dataframe summary statistics.
+# view(summarytools::dfSummary(cleaned_nmr_totals))
 
 # Exporting dataframe summary statistics to HTML output.
 cleaned_nmr_totals_summ <- summarytools::dfSummary(cleaned_nmr_totals, plain.ascii = FALSE, style = "grid", 
@@ -141,7 +172,9 @@ Hmisc::describe(cleaned_smr_totals)
 skimr::skim(cleaned_smr_totals)
 saved_x11_option <- st_options("use.x11")
 st_options(use.x11 = TRUE)
-view(summarytools::dfSummary(cleaned_smr_totals))
+
+# Uncomment this line to view the dataframe summary statistics.
+# view(summarytools::dfSummary(cleaned_smr_totals))
 
 # Exporting dataframe summary statistics to HTML output.
 cleaned_smr_totals_summ <- summarytools::dfSummary(cleaned_smr_totals, plain.ascii = FALSE, style = "grid", 
@@ -154,7 +187,9 @@ Hmisc::describe(cleaned_nmr_gender)
 skimr::skim(cleaned_nmr_gender)
 saved_x11_option <- st_options("use.x11")
 st_options(use.x11 = TRUE)
-view(summarytools::dfSummary(cleaned_nmr_gender))
+
+# Uncomment this line to view the dataframe summary statistics.
+# view(summarytools::dfSummary(cleaned_nmr_gender))
 
 # Exporting dataframe summary statistics to HTML output.
 cleaned_nmr_gender_summ <- summarytools::dfSummary(cleaned_nmr_gender, plain.ascii = FALSE, style = "grid", 
@@ -164,12 +199,20 @@ cat("Completed initial data exploration for national totals split by gender... \
 
 # ---------------------------------------------------------------- #
 
-##### Saving dataframe outputs as RDS files. #####
+##### Saving dataframe outputs as RDS and CSV files. #####
 
 # ---------------------------------------------------------------- #
 
-saveRDS(cleaned_nmr, file = "code/output/cleaned_nmr.RDS")
+# RDS format.
+saveRDS(cleaned_nmr_totals, file = "data/output/cleaned_nmr_totals.RDS")
+saveRDS(cleaned_smr_totals, file = "data/output/cleaned_smr_totals.RDS")
+saveRDS(cleaned_nmr_gender, file = "data/output/cleaned_nmr_gender.RDS")
 
-cat("Saved output dataframe... \n \n \n")
+# CSV format.
+write.csv(cleaned_nmr_totals, "data/output/cleaned_nmr_totals.csv", row.names = FALSE)
+write.csv(cleaned_smr_totals, "data/output/cleaned_smr_totals.csv", row.names = FALSE)
+write.csv(cleaned_nmr_gender, "data/output/cleaned_nmr_gender.csv", row.names = FALSE)
 
-cat("##### CLEANING COMPLETED #####")
+cat("Saved output dataframes... \n \n \n")
+
+cat("##### CLEANING COMPLETED ##### \n \n \n")
