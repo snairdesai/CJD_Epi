@@ -1,18 +1,68 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-11-15 19:23:56
-Working directory: /Users/jccp/Desktop/template/analysis
+Makelog started: 2022-12-31 15:43:40
+Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
 Version logs successfully written!
-Executing command: `python  "/Users/jccp/Desktop/template/analysis/code/analyze_data.py" `
-/usr/local/Caskroom/miniconda/base/envs/template/lib/python3.11/site-packages/linearmodels/panel/model.py:1183: MissingValueWarning: 
-Inputs contain missing values. Dropping rows with missing observations.
-  super().__init__(dependent, exog, weights=weights, check_rank=check_rank)
+Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_a.R"`
+National mortality rates by gender have been loaded... 
+  time_period gender raw_death_count us_time_period_pop raw_death_rate
+1        1999 Female             522        142,237,295         36.699
+2        1999   Male             465        136,802,873         33.991
+3        1999   Both             987        279,040,168         35.371
+4        2000 Female             289        143,368,343         20.158
+5        2000   Male             276        138,053,563         19.992
+6        2000   Both             565        281,421,906         20.077
+  raw_death_rate_ci_low raw_death_rate_ci_hi raw_death_rate_se
+1                33.551               39.848             1.606
+2                30.901               37.080             1.576
+3                33.165               37.578             1.126
+4                17.834               22.482             1.186
+5                17.634               22.351             1.203
+6                18.421               21.732             0.845
+  age_adj_death_rate age_adj_death_rate_ci_low age_adj_death_rate_ci_hi
+1             33.272                    30.384                   36.161
+2             39.174                    35.530                   42.817
+3             35.966                    33.699                   38.233
+4             16.721                    14.708                   18.734
+5             23.289                    20.412                   26.165
+6             20.214                    18.489                   21.940
+  age_adj_death_rate_se time_period_death_share icd_code
+1                 1.474                    9.90    B94.8
+2                 1.859                    8.82    B94.8
+3                 1.157                   18.72    B94.8
+4                 1.027                    5.48    B94.8
+5                 1.467                    5.24    B94.8
+6                 0.880                   10.72    B94.8
+Figure A data has been compiled... 
+Figure A has been mapped and exported... 
+ 
+ 
+##### FIGURE A COMPILATION COMPLETED ##### 
+ 
+ 
+
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6      ✔ purrr   1.0.0 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-11-15 19:24:01
-Working directory: /Users/jccp/Desktop/template/analysis
+Makelog ended: 2022-12-31 15:43:45
+Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
