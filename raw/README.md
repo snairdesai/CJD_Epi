@@ -8,21 +8,37 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
 ---
 
 # When/where obtained & original form of files
-`Raw and Age-Adjusted National Mortality Rates (1999 - 2006).xlsx` 
+1. `Raw and Age-Adjusted National Mortality Rates (1999 - 2006).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F368](https://wonder.cdc.gov/controller/saved/D77/D318F368)
 
-`Raw and Age-Adjusted National Mortality Rates (2007 - 2020).xlsx` 
+2. `nmr_panel_a.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Adjusted National Mortality Rates (1999 - 2006).xlsx` 
+
+3. `Raw and Age-Adjusted National Mortality Rates (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F370](https://wonder.cdc.gov/controller/saved/D77/D318F370)
 
-`Raw and Age-Adjusted State Mortality Rates (1999 - 2006).xlsx` 
+4. `nmr_panel_b.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Adjusted National Mortality Rates (2007 - 2020).xlsx` 
+
+5. `Raw and Age-Adjusted State Mortality Rates (1999 - 2006).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F367](https://wonder.cdc.gov/controller/saved/D77/D318F367)
 
-`Raw and Age-Adjusted State Mortality Rates (2007 - 2020).xlsx` 
+6. `smr_panel_a.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Adjusted State Mortality Rates (1999 - 2006).xlsx`
+
+7. `Raw and Age-Adjusted State Mortality Rates (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F369](https://wonder.cdc.gov/controller/saved/D77/D318F369) 
+
+8. `smr_panel_b.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Adjusted State Mortality Rates (2007 - 2020).xlsx` 
 
 ---
 
