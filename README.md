@@ -1,4 +1,17 @@
-# README
+# Purpose and Collaboraters
+
+The purpose of the `CJD_Epi` repository is to document source code, raw data, temporary files, and outputs from our analysis of recent trends in the evolving epidemiology of Creutzfeldt-Jakob Disease in the United States.
+
+The co-authors for this project are:
+
+- Matthew A. Crane (Institutional Affiliations: Johns Hopkins University School of Medicine & USC Schaeffer Center; Contact: [crane@jhu.edu](mailto:crane@jhu.edu); Website: [https://healthpolicy.usc.edu/author/matthew-a-crane/](https://healthpolicy.usc.edu/author/matthew-a-crane/))
+- Sameer Nair-Desai (Institutional Affiliations: Stanford University & Meridian Collective; Contact: [sameernd@stanford.edu](mailto:sameernd@stanford.edu); Website: [https://sameernairdesai.wordpress.com/](https://sameernairdesai.wordpress.com/))
+- John A. Romley (Institutional Affiliations: USC Schaeffer Center, USC Price School of Public Policy, & USC School of Pharmacy; Website: [https://priceschool.usc.edu/people/john-a-romley/](https://priceschool.usc.edu/people/john-a-romley/))
+- John C. Probasco (Institutional Affiliations: Johns Hopkins University School of Medicine; Website: [https://www.hopkinsmedicine.org/profiles/details/john-probasco](https://www.hopkinsmedicine.org/profiles/details/john-probasco))
+
+# Template Instructions
+
+_Note:_ The `template` from this repository has been forked from `gentzkow/template`. All credit to Matthew Gentzkow and his team. See the [License](#license) below for further reference.
 
 ## **Table of Contents**
 
@@ -197,3 +210,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
