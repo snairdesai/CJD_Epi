@@ -52,6 +52,7 @@ raw_deaths_by_gender_plot <- fig_a_dat %>%
         label = "Switch in ICD Codes", vjust = 2, geom = "label")
 
 ggsave("output/raw_deaths_by_gender_plot.eps")
+ggsave("output/raw_deaths_by_gender_plot.pdf")
 
 cat("Figure A has been mapped and exported... \n \n \n")
 

@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-12-31 15:43:40
+Makelog started: 2022-12-31 15:47:15
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -60,9 +60,10 @@ The following object is masked from ‘package:dplyr’:
     combine
 
 Saving 7 x 7 in image
+Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-12-31 15:43:45
+Makelog ended: 2022-12-31 15:47:20
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
