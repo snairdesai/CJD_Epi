@@ -14,7 +14,7 @@ dependencies:
   - jupyter
   - linearmodels
   # - julia 
-  # - pip
+  - pip = 19
   # - pip: # if there is a package available via pip but not with conda, can import like this:
   - r = 4.2.1
   - r-yaml # import r packages by prepending with "r-"
