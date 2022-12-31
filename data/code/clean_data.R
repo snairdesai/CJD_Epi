@@ -18,7 +18,6 @@ library(data.table)
 ### Summary Statistics
 library(skimr)
 library(Hmisc)
-library(summarytools)
 
 # ---------------------------------------------------------------- #
 
@@ -27,29 +26,29 @@ library(summarytools)
 # ---------------------------------------------------------------- #
 
 # First, for overall totals.
-raw_nmr_panel_a_totals <- read.csv("raw/nmr_panel_a_totals.csv")
+raw_nmr_panel_a_totals <- read.csv("input/nmr_panel_a_totals.csv")
 cat("Overall national mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_totals)
 
-raw_nmr_panel_b_totals <- read.csv("raw/nmr_panel_b_totals.csv")
+raw_nmr_panel_b_totals <- read.csv("input/nmr_panel_b_totals.csv")
 cat("Overall national mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_totals)
 
-raw_smr_panel_a_totals <- read.csv("raw/smr_panel_a_totals.csv")
+raw_smr_panel_a_totals <- read.csv("input/smr_panel_a_totals.csv")
 cat("Overall state mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_smr_panel_a_totals)
 
-raw_smr_panel_b_totals <- read.csv("raw/smr_panel_b_totals.csv")
+raw_smr_panel_b_totals <- read.csv("input/smr_panel_b_totals.csv")
 cat("Overall state mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_smr_panel_b_totals)
 
 # Next, for totals by gender.
 
-raw_nmr_panel_a_gender <- read.csv("raw/nmr_panel_a_gender.csv")
+raw_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender.csv")
 cat("National mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_gender)
 
-raw_nmr_panel_b_gender <- read.csv("raw/nmr_panel_b_gender.csv")
+raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_gender)
 
@@ -128,10 +127,10 @@ cleaned_nmr_panel_a_gender <- clean_dfs(raw_dat = raw_nmr_panel_a_gender, icd_in
 cleaned_nmr_panel_b_gender <- clean_dfs(raw_dat = raw_nmr_panel_b_gender, icd_input = "A81.0")
 
 # Completing final renames for national data by gender.
-raw_nmr_panel_a_gender <- raw_nmr_panel_a_gender %>%
+cleaned_nmr_panel_a_gender <- cleaned_nmr_panel_a_gender %>%
     dplyr::rename(gender = `Gender`)
 
-raw_nmr_panel_b_gender <- raw_nmr_panel_b_gender %>%
+cleaned_nmr_panel_b_gender <- cleaned_nmr_panel_b_gender %>%
     dplyr::rename(gender = `Gender`)
 
 cat("Completed cleaning process ... \n")
@@ -155,47 +154,18 @@ cleaned_nmr_gender <- rbind(cleaned_nmr_panel_a_gender, cleaned_nmr_panel_b_gend
 # First, for our overall national totals.
 Hmisc::describe(cleaned_nmr_totals)
 skimr::skim(cleaned_nmr_totals)
-saved_x11_option <- st_options("use.x11")
-st_options(use.x11 = TRUE)
-
-# Uncomment this line to view the dataframe summary statistics.
-# view(summarytools::dfSummary(cleaned_nmr_totals))
-
-# Exporting dataframe summary statistics to HTML output.
-cleaned_nmr_totals_summ <- summarytools::dfSummary(cleaned_nmr_totals, plain.ascii = FALSE, style = "grid", 
-                        graph.magnif = 0.75, valid.col = FALSE, tmp.img.dir = "/tmp")
 
 cat("Completed initial data exploration for overall national totals... \n")
 
 # Next, for our overall state totals.
 Hmisc::describe(cleaned_smr_totals)
 skimr::skim(cleaned_smr_totals)
-saved_x11_option <- st_options("use.x11")
-st_options(use.x11 = TRUE)
-
-# Uncomment this line to view the dataframe summary statistics.
-# view(summarytools::dfSummary(cleaned_smr_totals))
-
-# Exporting dataframe summary statistics to HTML output.
-cleaned_smr_totals_summ <- summarytools::dfSummary(cleaned_smr_totals, plain.ascii = FALSE, style = "grid", 
-                        graph.magnif = 0.75, valid.col = FALSE, tmp.img.dir = "/tmp")
 
 cat("Completed initial data exploration for overall state totals... \n")
 
 # Lastly, for our national totals split by gender.
 Hmisc::describe(cleaned_nmr_gender)
 skimr::skim(cleaned_nmr_gender)
-saved_x11_option <- st_options("use.x11")
-st_options(use.x11 = TRUE)
-
-# Uncomment this line to view the dataframe summary statistics.
-# view(summarytools::dfSummary(cleaned_nmr_gender))
-
-# Exporting dataframe summary statistics to HTML output.
-cleaned_nmr_gender_summ <- summarytools::dfSummary(cleaned_nmr_gender, plain.ascii = FALSE, style = "grid", 
-                        graph.magnif = 0.75, valid.col = FALSE, tmp.img.dir = "/tmp")
-
-cat("Completed initial data exploration for national totals split by gender... \n")
 
 # ---------------------------------------------------------------- #
 
@@ -204,14 +174,14 @@ cat("Completed initial data exploration for national totals split by gender... \
 # ---------------------------------------------------------------- #
 
 # RDS format.
-saveRDS(cleaned_nmr_totals, file = "data/output/cleaned_nmr_totals.RDS")
-saveRDS(cleaned_smr_totals, file = "data/output/cleaned_smr_totals.RDS")
-saveRDS(cleaned_nmr_gender, file = "data/output/cleaned_nmr_gender.RDS")
+saveRDS(cleaned_nmr_totals, file = "output/cleaned_nmr_totals.RDS")
+saveRDS(cleaned_smr_totals, file = "output/cleaned_smr_totals.RDS")
+saveRDS(cleaned_nmr_gender, file = "output/cleaned_nmr_gender.RDS")
 
 # CSV format.
-write.csv(cleaned_nmr_totals, "data/output/cleaned_nmr_totals.csv", row.names = FALSE)
-write.csv(cleaned_smr_totals, "data/output/cleaned_smr_totals.csv", row.names = FALSE)
-write.csv(cleaned_nmr_gender, "data/output/cleaned_nmr_gender.csv", row.names = FALSE)
+write.csv(cleaned_nmr_totals, "output/cleaned_nmr_totals.csv", row.names = FALSE)
+write.csv(cleaned_smr_totals, "output/cleaned_smr_totals.csv", row.names = FALSE)
+write.csv(cleaned_nmr_gender, "output/cleaned_nmr_gender.csv", row.names = FALSE)
 
 cat("Saved output dataframes... \n \n \n")
 
