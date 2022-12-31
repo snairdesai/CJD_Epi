@@ -24,9 +24,6 @@ dependencies:
   - r-data.table
   - r-skimr
   - r-Hmisc
-  - r-summarytools
-  - r-ggrepel
-  - r-ggforce
   - r-gghighlight
   - r-patchwork
   - r-gridExtra
