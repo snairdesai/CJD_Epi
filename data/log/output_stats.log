@@ -1,4 +1,7 @@
 file name | last modified | file size
-/Users/jccp/Desktop/template/data/output/data_merged.csv | 2022-11-16 03:23:51 | 10290907
-/Users/jccp/Desktop/template/data/output/chips_sold.pdf | 2022-11-16 03:23:55 | 6920
-/Users/jccp/Desktop/template/data/output/data_cleaned.csv | 2022-11-16 03:23:55 | 10260923
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.csv | 2022-12-31 23:47:15 | 2501
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.csv | 2022-12-31 23:47:15 | 37155
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.csv | 2022-12-31 23:47:15 | 7091
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.RDS | 2022-12-31 23:47:15 | 1792
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.RDS | 2022-12-31 23:47:15 | 3889
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.RDS | 2022-12-31 23:47:15 | 14993

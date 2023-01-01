@@ -1,4 +1,8 @@
 destination | source
-input/lib | /Users/jccp/Desktop/template/lib
-input/tv.csv | /Users/jccp/Desktop/template/raw/tv.csv
-input/chips.csv | /Users/jccp/Desktop/template/raw/chips.csv
+input/lib | /Users/sameernd/Desktop/CJD_Epi/lib
+input/nmr_panel_a_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_a_totals.csv
+input/nmr_panel_b_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_b_totals.csv
+input/smr_panel_a_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/smr_panel_a_totals.csv
+input/smr_panel_b_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/smr_panel_b_totals.csv
+input/nmr_panel_a_gender.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_a_gender.csv
+input/nmr_panel_b_gender.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_b_gender.csv

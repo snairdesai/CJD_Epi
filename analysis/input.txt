@@ -16,4 +16,4 @@
 
 # Destination    | Source
 lib              | {root}/lib
-data_cleaned.csv | {root}/data/output/data_cleaned.csv
+cleaned_nmr_gender.RDS | {root}/data/output/cleaned_nmr_gender.RDS
