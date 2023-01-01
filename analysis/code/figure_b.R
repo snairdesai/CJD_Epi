@@ -47,9 +47,9 @@ raw_deaths_by_gender_plot <- fig_b_dat %>%
     labs(x = "Year", y = "Age-Adjusted Death Rate") +
     geom_vline(xintercept = as.Date(ISOdate(2007, 1, 1)), linetype = "dotted",
                color = "black", size = 1.5) +
-   theme(legend.position = "bottom")
-#    annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 425,
-#         label = "Switch in ICD Codes", vjust = 2, geom = "label")
+   theme(legend.position = "bottom") +
+   annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 30,
+        label = "Switch in ICD Codes", vjust = 2, geom = "label")
 
 ggsave("output/age_adj_deaths_by_gender_plot.eps")
 ggsave("output/age_adj_deaths_by_gender_plot.pdf")
