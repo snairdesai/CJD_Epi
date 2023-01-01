@@ -41,7 +41,7 @@ gs.get_modified_sources(PATHS, inputs + externals)
 gs.write_version_logs(PATHS)
 
 ### RUN SCRIPTS
-gs.run_r(PATHS, program = 'code/figure_a.R')
+gs.run_r(PATHS, program = 'code/figure_c.R')
 
 ### LOG OUTPUTS
 gs.log_files_in_output(PATHS)

@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-12-31 16:36:41
+Makelog started: 2022-12-31 17:29:35
 Working directory: /Users/sameernd/Desktop/CJD_Epi/data
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -1014,6 +1014,6 @@ as.numeric(age_specific_death_rate) * 100`.
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-12-31 16:36:50
+Makelog ended: 2022-12-31 17:29:42
 Working directory: /Users/sameernd/Desktop/CJD_Epi/data
 --------------------------------------------------------------------------------
