@@ -1,18 +1,48 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-11-15 19:23:56
-Working directory: /Users/jccp/Desktop/template/analysis
+Makelog started: 2022-12-31 17:29:42
+Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
 Version logs successfully written!
-Executing command: `python  "/Users/jccp/Desktop/template/analysis/code/analyze_data.py" `
-/usr/local/Caskroom/miniconda/base/envs/template/lib/python3.11/site-packages/linearmodels/panel/model.py:1183: MissingValueWarning: 
-Inputs contain missing values. Dropping rows with missing observations.
-  super().__init__(dependent, exog, weights=weights, check_rank=check_rank)
+Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_c.R"`
+Age-specific national mortality rates by gender have been loaded... 
+  time_period age_specific_death_rate Gender  Age Groups       Year
+1        1999                  36.221   Male 45-54 years 1999-01-01
+2        1999                  50.003   Male 55-64 years 1999-01-01
+3        1999                 119.371   Male 65-74 years 1999-01-01
+4        1999                 240.978   Male 75-84 years 1999-01-01
+5        1999                 293.302   Male   85+ years 1999-01-01
+6        2000                  12.434   Male 45-54 years 2000-01-01
+Figure C data has been compiled... 
+Figure C has been mapped and exported... 
+ 
+ 
+##### FIGURE C COMPILATION COMPLETED ##### 
+ 
+ 
+
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6      ✔ purrr   1.0.0 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.5.0 
+✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Saving 7 x 7 in image
+Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-11-15 19:24:01
-Working directory: /Users/jccp/Desktop/template/analysis
+Makelog ended: 2022-12-31 17:29:47
+Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
