@@ -42,19 +42,35 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
 
 9. `Raw and Age-Adjusted National Mortality Rates by Gender (1999 - 2006).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F376](https://wonder.cdc.gov/controller/saved/D77/D318F376) 
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F376](https://wonder.cdc.gov/controller/saved/D77/D318F376)
 
 10. `nmr_panel_a_gender.csv` 
   - Produced through minor formatting edits to the above file:
-  `Raw and Age-Adjusted National Mortality Rates by Gender (1999 - 2006).xlsx`   
+  `Raw and Age-Adjusted National Mortality Rates by Gender (1999 - 2006).xlsx`
 
-11. `Raw and Age-Adjusted National Mortality Rates by Gender (2007 - 2020).xlsx` 
+11. `Raw and Age-Adjusted National Mortality Rates by Gender (2007 - 2020).xlsx`
   - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F375](https://wonder.cdc.gov/controller/saved/D77/D318F375) 
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F375](https://wonder.cdc.gov/controller/saved/D77/D318F375)
 
 12. `nmr_panel_b_gender.csv` 
   - Produced through minor formatting edits to the above file:
-  `Raw and Age-Adjusted National Mortality Rates by Gender (2007 - 2020).xlsx`     
+  `Raw and Age-Adjusted National Mortality Rates by Gender (2007 - 2020).xlsx`
+
+13. `Raw and Age-Specific National Mortality Rates by Gender (1999 - 2006).xlsx` 
+  - Generated through CDC Wonder on 12-31-2022.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F392](https://wonder.cdc.gov/controller/saved/D77/D318F392)
+
+14. `nmr_panel_a_gender_specific.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Specific National Mortality Rates by Gender (1999 - 2006).xlsx`  
+
+15. `Raw and Age-Specific National Mortality Rates by Gender (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 12-31-2022.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F394](https://wonder.cdc.gov/controller/saved/D77/D318F394)
+
+16. `nmr_panel_b_gender_specific.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Specific National Mortality Rates by Gender (2007 - 2020).xlsx`    
 
 ---
 
