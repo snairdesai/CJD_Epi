@@ -1,7 +1,9 @@
 file name | last modified | file size
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.csv | 2022-12-31 23:47:15 | 2501
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.csv | 2022-12-31 23:47:15 | 37155
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.csv | 2022-12-31 23:47:15 | 7091
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.RDS | 2022-12-31 23:47:15 | 1792
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.RDS | 2022-12-31 23:47:15 | 3889
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.RDS | 2022-12-31 23:47:15 | 14993
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.RDS | 2023-01-01 00:36:50 | 3889
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS | 2023-01-01 00:36:50 | 8747
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.csv | 2023-01-01 00:36:50 | 37155
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.csv | 2023-01-01 00:36:50 | 2501
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.RDS | 2023-01-01 00:36:50 | 14993
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.RDS | 2023-01-01 00:36:50 | 1792
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.csv | 2023-01-01 00:36:50 | 7091
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.csv | 2023-01-01 00:36:50 | 24440

@@ -16,9 +16,11 @@
 
 # Destination | Source
 lib           | {root}/lib
-nmr_panel_a_totals.csv        | {root}/raw/nmr_panel_a_totals.csv
-nmr_panel_b_totals.csv        | {root}/raw/nmr_panel_b_totals.csv
-smr_panel_a_totals.csv        | {root}/raw/smr_panel_a_totals.csv
-smr_panel_b_totals.csv        | {root}/raw/smr_panel_b_totals.csv
-nmr_panel_a_gender.csv        | {root}/raw/nmr_panel_a_gender.csv
-nmr_panel_b_gender.csv        | {root}/raw/nmr_panel_b_gender.csv
+nmr_panel_a_totals.csv                | {root}/raw/nmr_panel_a_totals.csv
+nmr_panel_b_totals.csv                | {root}/raw/nmr_panel_b_totals.csv
+smr_panel_a_totals.csv                | {root}/raw/smr_panel_a_totals.csv
+smr_panel_b_totals.csv                | {root}/raw/smr_panel_b_totals.csv
+nmr_panel_a_gender.csv                | {root}/raw/nmr_panel_a_gender.csv
+nmr_panel_b_gender.csv                | {root}/raw/nmr_panel_b_gender.csv
+nmr_panel_a_gender_specific.csv       | {root}/raw/nmr_panel_a_gender_specific.csv
+nmr_panel_b_gender_specific.csv       | {root}/raw/nmr_panel_b_gender_specific.csv
