@@ -56,7 +56,7 @@ female_age_specific_deaths_plot <- fig_d_dat_females %>%
     geom_vline(xintercept = as.Date(ISOdate(2007, 1, 1)), linetype = "dotted",
                color = "black", size = 1.5) +
    theme(legend.position = "bottom") +
-   annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 350,
+   annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 425,
         label = "Switch in ICD Codes", vjust = 2, geom = "label")
 
 ggsave("output/female_age_specific_deaths_plot.eps")
