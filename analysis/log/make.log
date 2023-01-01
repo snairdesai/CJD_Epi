@@ -1,25 +1,25 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-12-31 17:29:42
+Makelog started: 2022-12-31 17:47:21
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
 Version logs successfully written!
-Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_c.R"`
+Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_d.R"`
 Age-specific national mortality rates by gender have been loaded... 
   time_period age_specific_death_rate Gender  Age Groups       Year
-1        1999                  36.221   Male 45-54 years 1999-01-01
-2        1999                  50.003   Male 55-64 years 1999-01-01
-3        1999                 119.371   Male 65-74 years 1999-01-01
-4        1999                 240.978   Male 75-84 years 1999-01-01
-5        1999                 293.302   Male   85+ years 1999-01-01
-6        2000                  12.434   Male 45-54 years 2000-01-01
-Figure C data has been compiled... 
-Figure C has been mapped and exported... 
+1        1999                  34.886 Female 45-54 years 1999-01-01
+2        1999                  59.780 Female 55-64 years 1999-01-01
+3        1999                 107.650 Female 65-74 years 1999-01-01
+4        1999                 170.013 Female 75-84 years 1999-01-01
+5        1999                 287.093 Female   85+ years 1999-01-01
+6        2000                  10.948 Female 45-54 years 2000-01-01
+Figure D data has been compiled... 
+Figure D has been mapped and exported... 
  
  
-##### FIGURE C COMPILATION COMPLETED ##### 
+##### FIGURE D COMPILATION COMPLETED ##### 
  
  
 
@@ -43,6 +43,6 @@ Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-12-31 17:29:47
+Makelog ended: 2022-12-31 17:47:26
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
