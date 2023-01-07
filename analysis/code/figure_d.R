@@ -34,7 +34,9 @@ fig_d_dat_females <- cleaned_nmr_gender_specific %>%
                   age_groups != "All years" &
                   # Too many missing values in the following age cohorts...
                   age_groups != "25-34 years" &
-                  age_groups != "35-44 years") %>%
+                  age_groups != "35-44 years" &
+                  age_groups != "45-54 years" &
+                  age_groups != "85+ years") %>%
     dplyr::rename(`Gender` = gender, `Age Groups` = age_groups) %>%
     dplyr::mutate(`Year` = as.Date(ISOdate(time_period, 1, 1))) %>%
     tidyr::drop_na()
@@ -53,11 +55,7 @@ female_age_specific_deaths_plot <- fig_d_dat_females %>%
                                   "#3288BD")) +
     theme_classic() +
     labs(x = "Year", y = "Female Death Rate by Age Group") +
-    geom_vline(xintercept = as.Date(ISOdate(2007, 1, 1)), linetype = "dotted",
-               color = "black", size = 1.5) +
-   theme(legend.position = "bottom") +
-   annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 425,
-        label = "Switch in ICD Codes", vjust = 2, geom = "label")
+    theme(legend.position = "bottom")
 
 ggsave("output/female_age_specific_deaths_plot.eps")
 ggsave("output/female_age_specific_deaths_plot.pdf")

@@ -1,20 +1,22 @@
 --------------------------------------------------------------------------------
-Makelog started: 2022-12-31 17:50:04
+Makelog started: 2023-01-07 13:56:47
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
+WARNING! The following target files have been modified according to git status:
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
 Version logs successfully written!
 Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_d.R"`
 Age-specific national mortality rates by gender have been loaded... 
   time_period age_specific_death_rate Gender  Age Groups       Year
-1        1999                  34.886 Female 45-54 years 1999-01-01
-2        1999                  59.780 Female 55-64 years 1999-01-01
-3        1999                 107.650 Female 65-74 years 1999-01-01
-4        1999                 170.013 Female 75-84 years 1999-01-01
-5        1999                 287.093 Female   85+ years 1999-01-01
-6        2000                  10.948 Female 45-54 years 2000-01-01
+1        2007                  31.489 Female 55-64 years 2007-01-01
+2        2007                  44.357 Female 65-74 years 2007-01-01
+3        2007                  31.191 Female 75-84 years 2007-01-01
+4        2008                  22.622 Female 55-64 years 2008-01-01
+5        2008                  49.981 Female 65-74 years 2008-01-01
+6        2008                  47.019 Female 75-84 years 2008-01-01
 Figure D data has been compiled... 
 Figure D has been mapped and exported... 
  
@@ -43,6 +45,6 @@ Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2022-12-31 17:50:09
+Makelog ended: 2023-01-07 13:56:52
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
