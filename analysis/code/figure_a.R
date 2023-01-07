@@ -28,8 +28,7 @@ head(cleaned_nmr_gender)
 # Rearranging data for figure.
 fig_a_dat <- cleaned_nmr_gender %>%
     dplyr::select(time_period, raw_death_count, gender) %>%
-    dplyr::filter(time_period != "1999-2006" &
-                  time_period != "2007 - 2020" &
+    dplyr::filter(time_period != "2007 - 2020" &
                   gender != "Both") %>%
     dplyr::rename(`Gender` = gender) %>%
     dplyr::mutate(`Year` = as.Date(ISOdate(time_period, 1, 1)))
@@ -41,15 +40,11 @@ raw_deaths_by_gender_plot <- fig_a_dat %>%
   ggplot(aes(x = `Year`, y = raw_death_count,
              group = `Gender`, color = `Gender`)) +
     geom_line(aes(linetype = `Gender`), size = 2) +
-    scale_linetype_manual(values = c("solid", "dashed")) +
+    scale_linetype_manual(values = c("solid", "solid")) +
     scale_color_manual(values = c("brown2", "dodgerblue2")) +
     theme_classic() +
     labs(x = "Year", y = "Raw Death Count") +
-    geom_vline(xintercept = as.Date(ISOdate(2007, 1, 1)), linetype = "dotted",
-               color = "black", size = 1.5) +
-   theme(legend.position = "bottom") +
-   annotate(x = as.Date(ISOdate(2007, 1, 1)), y = 425,
-        label = "Switch in ICD Codes", vjust = 2, geom = "label")
+   theme(legend.position = "bottom")
 
 ggsave("output/raw_deaths_by_gender_plot.eps")
 ggsave("output/raw_deaths_by_gender_plot.pdf")
