@@ -135,15 +135,15 @@ cleaned_nmr_panel_b_gender <- cleaned_nmr_panel_b_gender %>%
 
 cat("Completed cleaning process ... \n")
 
-# ---------------------------------------------------------------- #
+# ------------------------------------------------------------------ #
 
-##### Appending dataframes. #####
+##### We no longer append 1999 - 2006 data, but begin from 2007. #####
 
-# ---------------------------------------------------------------- #
+# ------------------------------------------------------------------ #
 
-cleaned_nmr_totals <- rbind(cleaned_nmr_panel_a_totals, cleaned_nmr_panel_b_totals)
-cleaned_smr_totals <- rbind(cleaned_smr_panel_a_totals, cleaned_smr_panel_b_totals)
-cleaned_nmr_gender <- rbind(cleaned_nmr_panel_a_gender, cleaned_nmr_panel_b_gender)
+cleaned_nmr_totals <- cleaned_nmr_panel_b_totals
+cleaned_smr_totals <- cleaned_smr_panel_b_totals
+cleaned_nmr_gender <- cleaned_nmr_panel_b_gender
 
 # ---------------------------------------------------------------- #
 
