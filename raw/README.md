@@ -8,21 +8,23 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
 ---
 
 # When/where obtained & original form of files
-`Raw and Age-Adjusted National Mortality Rates (1999 - 2006).xlsx` 
-  - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F368](https://wonder.cdc.gov/controller/saved/D77/D318F368)
 
 `Raw and Age-Adjusted National Mortality Rates (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 12-30-2022.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F370](https://wonder.cdc.gov/controller/saved/D77/D318F370)
 
-`Raw and Age-Adjusted State Mortality Rates (1999 - 2006).xlsx` 
-  - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F367](https://wonder.cdc.gov/controller/saved/D77/D318F367)
+`Raw and Age-Specific National Mortality Rates by Age Groups (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-16-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D326F023](https://wonder.cdc.gov/controller/saved/D77/D326F023)
 
-`Raw and Age-Adjusted State Mortality Rates (2007 - 2020).xlsx` 
-  - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F369](https://wonder.cdc.gov/controller/saved/D77/D318F369) 
+`Raw and Age-Adjusted National Mortality Rates by Urbanity (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-16-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D326F024](https://wonder.cdc.gov/controller/saved/D77/D326F024)
+
+`Raw and Age-Adjusted National Mortality Rates by Non-Hispanic White vs. Non-Hispanic Black (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-16-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D326F027](https://wonder.cdc.gov/controller/saved/D77/D326F027)
+
 
 ---
 
