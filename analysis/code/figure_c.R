@@ -45,8 +45,6 @@ fig_c_dat_males$`Age Groups` <- ifelse(
                                 "75+ years",
                                 fig_c_dat_males$`Age Groups`)
 
-head(fig_c_dat_males)
-
 cat("Figure C data has been compiled... \n")
 
 # Plotting line plot of relevant statistic.

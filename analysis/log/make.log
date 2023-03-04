@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-03-04 11:27:36
+Makelog started: 2023-03-04 11:31:04
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -130,13 +130,6 @@ Saving 7 x 7 in image
 
 Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_c.R"`
 Age-specific national mortality rates by gender have been loaded... 
-  time_period age_specific_death_rate Gender  Age Groups       Year
-1        2007                  33.793   Male 55-64 years 2007-01-01
-2        2007                  50.533   Male 65-74 years 2007-01-01
-3        2007                  51.920   Male   75+ years 2007-01-01
-4        2008                  25.493   Male 55-64 years 2008-01-01
-5        2008                  65.253   Male 65-74 years 2008-01-01
-6        2008                  71.960   Male   75+ years 2008-01-01
 Figure C data has been compiled... 
 Figure C has been mapped and exported... 
  
@@ -170,13 +163,6 @@ Saving 7 x 7 in image
 
 Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_d.R"`
 Age-specific national mortality rates by gender have been loaded... 
-  time_period age_specific_death_rate Gender  Age Groups       Year
-1        2007                  31.489 Female 55-64 years 2007-01-01
-2        2007                  44.357 Female 65-74 years 2007-01-01
-3        2007                  31.191 Female 75-84 years 2007-01-01
-4        2008                  22.622 Female 55-64 years 2008-01-01
-5        2008                  49.981 Female 65-74 years 2008-01-01
-6        2008                  47.019 Female 75-84 years 2008-01-01
 Figure D data has been compiled... 
 Figure D has been mapped and exported... 
  
@@ -210,6 +196,6 @@ Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-03-04 11:27:43
+Makelog ended: 2023-03-04 11:31:12
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------

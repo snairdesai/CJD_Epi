@@ -41,7 +41,10 @@ fig_d_dat_females <- cleaned_nmr_gender_specific %>%
     dplyr::mutate(`Year` = as.Date(ISOdate(time_period, 1, 1))) %>%
     tidyr::drop_na()
 
-head(fig_d_dat_females)
+fig_d_dat_females$`Age Groups` <- ifelse(
+                                fig_d_dat_females$`Age Groups` == "75-84 years",
+                                "75+ years",
+                                fig_d_dat_females$`Age Groups`)
 
 cat("Figure D data has been compiled... \n")
 
