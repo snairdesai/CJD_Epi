@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-01-07 13:40:02
+Makelog started: 2023-01-07 13:44:19
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -8,7 +8,7 @@ Source logs successfully written!
 WARNING! The following target files have been modified according to git status:
 /Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.RDS
 Version logs successfully written!
-Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_a.R"`
+Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_b.R"`
 National mortality rates by gender have been loaded... 
   time_period gender raw_death_count us_time_period_pop raw_death_rate
 1        2007 Female             153        153,166,353          9.989
@@ -39,10 +39,10 @@ National mortality rates by gender have been loaded...
 5                 0.993                    2.97    A81.0
 6                 0.584                    5.81    A81.0
 Figure A data has been compiled... 
-Figure A has been mapped and exported... 
+Figure B has been mapped and exported... 
  
  
-##### FIGURE A COMPILATION COMPLETED ##### 
+##### FIGURE B COMPILATION COMPLETED ##### 
  
  
 
@@ -66,6 +66,6 @@ Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-01-07 13:40:10
+Makelog ended: 2023-01-07 13:44:25
 Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
 --------------------------------------------------------------------------------
