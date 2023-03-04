@@ -1,4 +1,4 @@
-name: template #CHANGE for your project
+name: CJD_Epi 
 channels:
   - conda-forge
 dependencies:
@@ -14,8 +14,16 @@ dependencies:
   - jupyter
   - linearmodels
   # - julia 
-  # - pip
+  - pip
   # - pip: # if there is a package available via pip but not with conda, can import like this:
-  # - r
-  # - r-yaml # import r packages by prepending with "r-"
-  # - r-nicheROVER
+  - r
+  - r-yaml # import r packages by prepending with "r-"
+  - r-readr
+  - r-tidyverse
+  - r-lubridate
+  - r-data.table
+  - r-skimr
+  - r-Hmisc
+  - r-gghighlight
+  - r-patchwork
+  - r-gridExtra
