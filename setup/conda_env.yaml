@@ -23,7 +23,7 @@ dependencies:
   - r-lubridate
   - r-data.table
   - r-skimr
-  - r-Hmisc
+  - r-hmisc
   - r-gghighlight
   - r-patchwork
   - r-gridExtra
