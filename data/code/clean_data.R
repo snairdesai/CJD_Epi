@@ -51,7 +51,7 @@ raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_gender)
 
-# Now, for age-specific totals by gender.
+# Next, for age-specific totals by gender.
 specific_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender_specific.csv")
 cat("Age-specific national mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 head(specific_nmr_panel_a_gender)
@@ -180,6 +180,7 @@ cleaned_smr_panel_b_totals <- cleaned_smr_panel_b_totals %>%
     dplyr::rename(state = `State`,
                   state_code = `State.Code`)
 
+# Completing final renames for national data by gender.
 cleaned_nmr_panel_a_gender <- cleaned_nmr_panel_a_gender %>%
     dplyr::rename(gender = `Gender`)
 
