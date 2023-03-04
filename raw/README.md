@@ -82,31 +82,15 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
   - Produced through minor formatting edits to the above file:
   `Raw and Age-Adjusted National Mortality Rates by Gender and Race/Ethnicity (2007 - 2020).xlsx`
 
-`Raw and Age-Adjusted National Mortality Rates by Gender (2007 - 2020).xlsx` 
-  - Generated through CDC Wonder on 12-30-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F375](https://wonder.cdc.gov/controller/saved/D77/D318F375)
-
-`Raw and Age-Specific National Mortality Rates by Gender (2007 - 2020).xlsx` 
-  - Generated through CDC Wonder on 12-31-2022.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D318F394](https://wonder.cdc.gov/controller/saved/D77/D318F394)
-
-`Raw and Age-Adjusted National Mortality Rates by Gender and Race/Ethnicity (2007 - 2020).xlsx`
-  - Generated through CDC Wonder on 02-09-2023.
-  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D324F872](https://wonder.cdc.gov/controller/saved/D77/D324F872)
-
-`nmr_panel_b_gender_race_specific.csv` 
-  - Produced through minor formatting edits to the above file:
-  `Raw and Age-Adjusted National Mortality Rates by Gender and Race/Ethnicity (2007 - 2020).xlsx`
-
-`Raw and Age-Specific National Mortality Rates by Age Groups (2007 - 2020).xlsx` 
+19. `Raw and Age-Specific National Mortality Rates by Age Groups (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 02-16-2023.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D326F023](https://wonder.cdc.gov/controller/saved/D77/D326F023)
 
-`Raw and Age-Adjusted National Mortality Rates by Urbanity (2007 - 2020).xlsx` 
+20. `Raw and Age-Adjusted National Mortality Rates by Urbanity (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 02-23-2023.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D327F134](https://wonder.cdc.gov/controller/saved/D77/D327F134)
 
-`Raw and Age-Adjusted National Mortality Rates by Non-Hispanic White vs. Non-Hispanic Black (2007 - 2020).xlsx` 
+21. `Raw and Age-Adjusted National Mortality Rates by Non-Hispanic White vs. Non-Hispanic Black (2007 - 2020).xlsx` 
   - Generated through CDC Wonder on 02-23-2023.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D327F135](https://wonder.cdc.gov/controller/saved/D77/D327F135)
 
