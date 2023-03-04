@@ -43,8 +43,7 @@ gs.get_modified_sources(PATHS, inputs + externals)
 gs.write_version_logs(PATHS)
 
 ### RUN SCRIPTS
-gs.run_python(PATHS, 'code/merge_data.py')
-gs.run_python(PATHS, 'code/clean_data.py')
+gs.run_r(PATHS, 'code/clean_data.R')
 
 ### LOG OUTPUTS
 gs.log_files_in_output(PATHS)

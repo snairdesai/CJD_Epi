@@ -1,4 +1,9 @@
 file name | last modified | file size
-/Users/jccp/Desktop/template/data/output/data_merged.csv | 2022-11-16 03:23:51 | 10290907
-/Users/jccp/Desktop/template/data/output/chips_sold.pdf | 2022-11-16 03:23:55 | 6920
-/Users/jccp/Desktop/template/data/output/data_cleaned.csv | 2022-11-16 03:23:55 | 10260923
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.csv | 2023-01-07 21:56:47 | 19829
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.csv | 2023-01-07 21:56:47 | 13777
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS | 2023-01-07 21:56:47 | 5342
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.csv | 2023-01-07 21:56:47 | 1649
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_smr_totals.RDS | 2023-01-07 21:56:47 | 8370
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_totals.RDS | 2023-01-07 21:56:47 | 1290
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.RDS | 2023-01-07 21:56:47 | 2693
+/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender.csv | 2023-01-07 21:56:47 | 4549
