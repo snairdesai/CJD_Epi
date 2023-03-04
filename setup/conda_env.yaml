@@ -27,3 +27,4 @@ dependencies:
   - r-gghighlight
   - r-patchwork
   - r-gridExtra
+  - r-RColorBrewer

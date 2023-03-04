@@ -6,3 +6,5 @@ input/smr_panel_a_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/smr_panel_a_t
 input/smr_panel_b_totals.csv | /Users/sameernd/Desktop/CJD_Epi/raw/smr_panel_b_totals.csv
 input/nmr_panel_a_gender.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_a_gender.csv
 input/nmr_panel_b_gender.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_b_gender.csv
+input/nmr_panel_a_gender_specific.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_a_gender_specific.csv
+input/nmr_panel_b_gender_specific.csv | /Users/sameernd/Desktop/CJD_Epi/raw/nmr_panel_b_gender_specific.csv

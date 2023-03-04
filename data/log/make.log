@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-01-07 13:44:07
+Makelog started: 2023-01-07 13:53:32
 Working directory: /Users/sameernd/Desktop/CJD_Epi/data
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -251,6 +251,64 @@ National mortality rates by gender for panel B: 2007 - 2022 have been loaded...
 4                          0.00731              2.84%
 5                          0.00993              2.97%
 6                          0.00584              5.81%
+Age-specific national mortality rates by gender for panel A: 1999 - 2006 have been loaded... 
+  Year Gender Ten.Year.Age.Groups Deaths Population Crude.Rate
+1 1999 Female         25-34 years     18   19945090 Unreliable
+2 1999 Female         35-44 years     40   22669604    0.17645
+3 1999 Female         45-54 years     65   18632305    0.34886
+4 1999 Female         55-64 years     74   12378763     0.5978
+5 1999 Female         65-74 years    109   10125424     1.0765
+6 1999 Female         75-84 years    126    7411198    1.70013
+  Crude.Rate.Lower.95..Confidence.Interval
+1                                  0.05349
+2                                  0.12606
+3                                  0.26924
+4                                  0.46940
+5                                  0.87440
+6                                  1.40327
+  Crude.Rate.Upper.95..Confidence.Interval Crude.Rate.Standard.Error
+1                                  0.14263                   0.02127
+2                                  0.24027                   0.02790
+3                                  0.44465                   0.04327
+4                                  0.75048                   0.06949
+5                                  1.27859                   0.10311
+6                                  1.99699                   0.15146
+  X..of.Total.Deaths
+1              0.34%
+2              0.76%
+3              1.23%
+4              1.40%
+5              2.07%
+6              2.39%
+Age-specific national mortality rates by gender for panel B: 2007 - 2022 have been loaded... 
+  Year Gender Ten.Year.Age.Groups Deaths Population Crude.Rate
+1 2007 Female         45-54 years     16   22337962 Unreliable
+2 2007 Female         55-64 years     54   17148671    0.31489
+3 2007 Female         65-74 years     47   10595802    0.44357
+4 2007 Female         75-84 years     24    7694491    0.31191
+5 2007 Female           All years    153  153166353    0.09989
+6 2007   Male         45-54 years     15   21601977 Unreliable
+  Crude.Rate.Lower.95..Confidence.Interval
+1                                  0.04094
+2                                  0.23656
+3                                  0.32592
+4                                  0.19985
+5                                  0.08406
+6                                  0.03886
+  Crude.Rate.Upper.95..Confidence.Interval Crude.Rate.Standard.Error
+1                                  0.11632                   0.01791
+2                                  0.41087                   0.04285
+3                                  0.58986                   0.06470
+4                                  0.46410                   0.06367
+5                                  0.11572                   0.00808
+6                                  0.11453                   0.01793
+  X..of.Total.Deaths
+1              0.28%
+2              0.95%
+3              0.83%
+4              0.42%
+5              2.70%
+6              0.26%
 Completed cleaning process ... 
 cleaned_nmr_totals 
 
@@ -828,6 +886,160 @@ Group variables            None
  8  10.9    11.7    12.7     14.6   ▃▆▇▅▂
  9   0.547   0.703   0.802    0.993 ▁▁▆▇▃
 10   3.38    4.01    6.13   100     ▇▁▁▁▁
+cleaned_nmr_gender_specific 
+
+ 11  Variables      157  Observations
+--------------------------------------------------------------------------------
+time_period 
+       n  missing distinct 
+     157        0       15 
+
+lowest : 2007        2007 - 2020 2008        2009        2010       
+highest: 2016        2017        2018        2019        2020       
+
+2007 (11, 0.070), 2007 - 2020 (1, 0.006), 2008 (12, 0.076), 2009 (11, 0.070),
+2010 (11, 0.070), 2011 (11, 0.070), 2012 (10, 0.064), 2013 (11, 0.070), 2014
+(12, 0.076), 2015 (11, 0.070), 2016 (11, 0.070), 2017 (12, 0.076), 2018 (11,
+0.070), 2019 (11, 0.070), 2020 (11, 0.070)
+--------------------------------------------------------------------------------
+gender 
+       n  missing distinct 
+     157        0        3 
+                               
+Value        Both Female   Male
+Frequency      15     71     71
+Proportion  0.096  0.452  0.452
+--------------------------------------------------------------------------------
+age_groups 
+       n  missing distinct 
+     157        0        6 
+
+lowest : 45-54 years 55-64 years 65-74 years 75-84 years 85+ years  
+highest: 55-64 years 65-74 years 75-84 years 85+ years   All years  
+                                                                      
+Value      45-54 years 55-64 years 65-74 years 75-84 years   85+ years
+Frequency           27          28          28          28           3
+Proportion       0.172       0.178       0.178       0.178       0.019
+                      
+Value        All years
+Frequency           43
+Proportion       0.274
+--------------------------------------------------------------------------------
+raw_death_count 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     157        0      105        1    142.6    181.5     15.0     17.6 
+     .25      .50      .75      .90      .95 
+    33.0     62.0    158.0    259.0    407.2 
+
+lowest :   10   11   12   13   14, highest:  458  459  476  518 5662
+                                                                            
+Value          0    50   100   150   200   250   300   350   400   450   500
+Frequency     31    65    18     8    11     9     2     3     2     5     2
+Proportion 0.197 0.414 0.115 0.051 0.070 0.057 0.013 0.019 0.013 0.032 0.013
+                
+Value       5650
+Frequency      1
+Proportion 0.006
+
+For the frequency table, variable is rounded to the nearest 50
+--------------------------------------------------------------------------------
+us_time_period_pop 
+       n  missing distinct 
+     157        0      157 
+
+lowest :     1,662,814     2,279,669     4,053,362     5,392,948     5,419,659
+highest:   325,719,178   327,167,434   328,239,523   329,484,123 4,436,490,683
+--------------------------------------------------------------------------------
+age_specific_death_rate 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     137       20      136        1    33.95    23.67    10.16    10.71 
+     .25      .50      .75      .90      .95 
+   13.45    31.47    53.12    62.26    68.20 
+
+lowest :  8.811  8.904  9.460  9.985  9.989, highest: 71.360 71.689 71.960 78.234 82.090
+--------------------------------------------------------------------------------
+age_specific_death_rate_ci_low 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     157        0      157        1     23.5    18.21    4.288    5.360 
+     .25      .50      .75      .90      .95 
+   9.699   21.155   36.997   46.570   52.575 
+
+lowest :  2.673  2.833  3.166  3.457  3.886, highest: 56.698 57.526 58.068 63.935 65.661
+--------------------------------------------------------------------------------
+age_specific_death_rate_ci_hi 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     157        0      155        1    41.09    31.71    11.64    12.04 
+     .25      .50      .75      .90      .95 
+   14.46    37.15    68.71    82.38    86.31 
+
+lowest :   9.576   9.582  10.168  10.608  11.191
+highest:  91.950  92.532  98.372 101.380 110.598
+--------------------------------------------------------------------------------
+age_specific_death_rate_se 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     157        0      155        1    4.307    3.735   0.6386   0.8098 
+     .25      .50      .75      .90      .95 
+  0.9450   3.7950   7.0840   8.3710   9.8192 
+
+lowest :  0.170  0.578  0.585  0.586  0.596, highest: 10.270 10.575 11.523 15.196 19.018
+--------------------------------------------------------------------------------
+time_period_death_share 
+       n  missing distinct     Info     Mean      Gmd      .05      .10 
+     157        0      105        1    2.519    3.206    0.260    0.312 
+     .25      .50      .75      .90      .95 
+   0.580    1.100    2.790    4.570    7.192 
+
+lowest :   0.18   0.19   0.21   0.23   0.25, highest:   8.09   8.11   8.41   9.15 100.00
+                                                                            
+Value          0     1     2     3     4     5     6     7     8     9   100
+Frequency     32    68    14    12    14     3     4     2     6     1     1
+Proportion 0.204 0.433 0.089 0.076 0.089 0.019 0.025 0.013 0.038 0.006 0.006
+
+For the frequency table, variable is rounded to the nearest 1
+--------------------------------------------------------------------------------
+icd_code 
+       n  missing distinct    value 
+     157        0        1    A81.0 
+                
+Value      A81.0
+Frequency    157
+Proportion     1
+--------------------------------------------------------------------------------
+── Data Summary ────────────────────────
+                           Values                      
+Name                       cleaned_nmr_gender_specif...
+Number of rows             157                         
+Number of columns          11                          
+_______________________                                
+Column type frequency:                                 
+  character                5                           
+  numeric                  6                           
+________________________                               
+Group variables            None                        
+
+── Variable type: character ────────────────────────────────────────────────────
+  skim_variable      n_missing complete_rate min max empty n_unique whitespace
+1 time_period                0             1   4  11     0       15          0
+2 gender                     0             1   4   6     0        3          0
+3 age_groups                 0             1   9  11     0        6          0
+4 us_time_period_pop         0             1  13  13     0      157          0
+5 icd_code                   0             1   5   5     0        1          0
+
+── Variable type: numeric ──────────────────────────────────────────────────────
+  skim_variable                  n_missing complete_rate   mean     sd    p0
+1 raw_death_count                        0         1     143.   458.   10   
+2 age_specific_death_rate               20         0.873  33.9   20.9   8.81
+3 age_specific_death_rate_ci_low         0         1      23.5   16.2   2.67
+4 age_specific_death_rate_ci_hi          0         1      41.1   28.5   9.58
+5 age_specific_death_rate_se             0         1       4.31   3.41  0.17
+6 time_period_death_share                0         1       2.52   8.09  0.18
+     p25   p50    p75   p100 hist 
+1 33     62    158    5662   ▇▁▁▁▁
+2 13.4   31.5   53.1    82.1 ▇▃▃▅▁
+3  9.70  21.2   37.0    65.7 ▇▃▃▂▁
+4 14.5   37.1   68.7   111.  ▇▃▂▃▁
+5  0.945  3.80   7.08   19.0 ▇▅▂▁▁
+6  0.58   1.1    2.79  100   ▇▁▁▁▁
 Saved output dataframes... 
  
  
@@ -893,9 +1105,17 @@ Warning messages:
 2: Problem while computing `age_adj_death_rate = as.numeric(age_adj_death_rate) *
 100`.
 ℹ NAs introduced by coercion 
+Warning message:
+Problem while computing `age_specific_death_rate =
+as.numeric(age_specific_death_rate) * 100`.
+ℹ NAs introduced by coercion 
+Warning message:
+Problem while computing `age_specific_death_rate =
+as.numeric(age_specific_death_rate) * 100`.
+ℹ NAs introduced by coercion 
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-01-07 13:44:18
+Makelog ended: 2023-01-07 13:53:41
 Working directory: /Users/sameernd/Desktop/CJD_Epi/data
 --------------------------------------------------------------------------------

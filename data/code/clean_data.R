@@ -25,7 +25,7 @@ library(Hmisc)
 
 # ---------------------------------------------------------------- #
 
-# First, for overall totals.
+# First, for overall national and state totals.
 raw_nmr_panel_a_totals <- read.csv("input/nmr_panel_a_totals.csv")
 cat("Overall national mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_totals)
@@ -42,8 +42,7 @@ raw_smr_panel_b_totals <- read.csv("input/smr_panel_b_totals.csv")
 cat("Overall state mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_smr_panel_b_totals)
 
-# Next, for totals by gender.
-
+# Next, for age-adjusted totals by gender.
 raw_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender.csv")
 cat("National mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 head(raw_nmr_panel_a_gender)
@@ -52,20 +51,30 @@ raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 head(raw_nmr_panel_b_gender)
 
+# Now, for age-specific totals by gender.
+specific_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender_specific.csv")
+cat("Age-specific national mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
+head(specific_nmr_panel_a_gender)
+
+specific_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender_specific.csv")
+cat("Age-specific national mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
+head(specific_nmr_panel_b_gender)
+
 # ---------------------------------------------------------------- #
 
 ##### Cleaning dataframes. #####
 
 # ---------------------------------------------------------------- #
 
-clean_dfs <- function(raw_dat, icd_input) {
+# First, building a function to clean our raw dataframes.
+clean_raw_dfs <- function(raw_dat, icd_input) {
 
     # Defining a match list for our totals across time periods.
     match_list <- c("1999 - 2006", "2007 - 2020")
 
     # Generating a new cleaned dataframe.
-    clean_dat <- raw_dat %>% 
-        
+    clean_dat <- raw_dat %>%
+
         # Renaming variables.
         dplyr::rename(time_period = `Year`,
                       raw_death_count = `Deaths`,
@@ -79,7 +88,7 @@ clean_dfs <- function(raw_dat, icd_input) {
                       age_adj_death_rate_ci_hi = `Age.Adjusted.Rate.Upper.95..Confidence.Interval`,
                       age_adj_death_rate_se = `Age.Adjusted.Rate.Standard.Error`,
                       time_period_death_share = `X..of.Total.Deaths`) %>%
-        
+
         # Replacing missing values with NAs.
         dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
 
@@ -96,7 +105,48 @@ clean_dfs <- function(raw_dat, icd_input) {
                       age_adj_death_rate_ci_hi = as.numeric(age_adj_death_rate_ci_hi) * 100,
                       age_adj_death_rate_se = as.numeric(age_adj_death_rate_se) * 100,
                       time_period_death_share = readr::parse_number(time_period_death_share)) %>%
-    
+
+        # Reordering dataframe rows so totals across time periods are at bottom.
+        dplyr::arrange(time_period %in% match_list)
+
+        return(as.data.frame(clean_dat))
+
+}
+
+# Now, building a function to clean our age-specific dataframes.
+clean_specific_dfs <- function(raw_dat, icd_input) {
+
+    # Defining a match list for our totals across time periods.
+    match_list <- c("1999 - 2006", "2007 - 2020")
+
+    # Generating a new cleaned dataframe.
+    clean_dat <- raw_dat %>%
+
+        # Renaming variables.
+        dplyr::rename(time_period = `Year`,
+                      gender = `Gender`,
+                      age_groups = `Ten.Year.Age.Groups`,
+                      raw_death_count = `Deaths`,
+                      us_time_period_pop = `Population`,
+                      age_specific_death_rate = `Crude.Rate`,
+                      age_specific_death_rate_ci_low = `Crude.Rate.Lower.95..Confidence.Interval`,
+                      age_specific_death_rate_ci_hi = `Crude.Rate.Upper.95..Confidence.Interval`,
+                      age_specific_death_rate_se = `Crude.Rate.Standard.Error`,
+                      time_period_death_share = `X..of.Total.Deaths`) %>%
+
+        # Replacing missing values with NAs.
+        dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
+
+        # Initializing variable for ICD-code based on specified inputs and
+        # formatting numeric values.
+        dplyr::mutate(icd_code = icd_input,
+                      us_time_period_pop = format(as.numeric(us_time_period_pop), big.mark = ","),
+                      age_specific_death_rate = as.numeric(age_specific_death_rate) * 100,
+                      age_specific_death_rate_ci_low = as.numeric(age_specific_death_rate_ci_low) * 100,
+                      age_specific_death_rate_ci_hi = as.numeric(age_specific_death_rate_ci_hi) * 100,
+                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se) * 100,
+                      time_period_death_share = readr::parse_number(time_period_death_share)) %>%
+
         # Reordering dataframe rows so totals across time periods are at bottom.
         dplyr::arrange(time_period %in% match_list)
 
@@ -107,13 +157,21 @@ clean_dfs <- function(raw_dat, icd_input) {
 # Applying our cleaning function to the relevant dataframes...
 
 # First, for our overall national and state totals.
-cleaned_nmr_panel_a_totals <- clean_dfs(raw_dat = raw_nmr_panel_a_totals, icd_input = "B94.8")
-cleaned_nmr_panel_b_totals <- clean_dfs(raw_dat = raw_nmr_panel_b_totals, icd_input = "A81.0")
+cleaned_nmr_panel_a_totals <- clean_raw_dfs(raw_dat = raw_nmr_panel_a_totals, icd_input = "B94.8")
+cleaned_nmr_panel_b_totals <- clean_raw_dfs(raw_dat = raw_nmr_panel_b_totals, icd_input = "A81.0")
 
-cleaned_smr_panel_a_totals <- clean_dfs(raw_dat = raw_smr_panel_a_totals, icd_input = "B94.8")
-cleaned_smr_panel_b_totals <- clean_dfs(raw_dat = raw_smr_panel_b_totals, icd_input = "A81.0")
+cleaned_smr_panel_a_totals <- clean_raw_dfs(raw_dat = raw_smr_panel_a_totals, icd_input = "B94.8")
+cleaned_smr_panel_b_totals <- clean_raw_dfs(raw_dat = raw_smr_panel_b_totals, icd_input = "A81.0")
 
-# Completing final renames for state-level data.
+# Next, for our overall totals split by gender.
+cleaned_nmr_panel_a_gender <- clean_raw_dfs(raw_dat = raw_nmr_panel_a_gender, icd_input = "B94.8")
+cleaned_nmr_panel_b_gender <- clean_raw_dfs(raw_dat = raw_nmr_panel_b_gender, icd_input = "A81.0")
+
+# Next, for our age-specific totals by gender.
+cleaned_nmr_panel_a_gender_specific <- clean_specific_dfs(raw_dat = specific_nmr_panel_a_gender, icd_input = "B94.8")
+cleaned_nmr_panel_b_gender_specific <- clean_specific_dfs(raw_dat = specific_nmr_panel_b_gender, icd_input = "A81.0")
+
+# Completing final renames for national and state-level data.
 cleaned_smr_panel_a_totals <- cleaned_smr_panel_a_totals %>%
     dplyr::rename(state = `State`,
                   state_code = `State.Code`)
@@ -122,11 +180,6 @@ cleaned_smr_panel_b_totals <- cleaned_smr_panel_b_totals %>%
     dplyr::rename(state = `State`,
                   state_code = `State.Code`)
 
-# Next, for our national totals split by gender.
-cleaned_nmr_panel_a_gender <- clean_dfs(raw_dat = raw_nmr_panel_a_gender, icd_input = "B94.8")
-cleaned_nmr_panel_b_gender <- clean_dfs(raw_dat = raw_nmr_panel_b_gender, icd_input = "A81.0")
-
-# Completing final renames for national data by gender.
 cleaned_nmr_panel_a_gender <- cleaned_nmr_panel_a_gender %>%
     dplyr::rename(gender = `Gender`)
 
@@ -144,6 +197,7 @@ cat("Completed cleaning process ... \n")
 cleaned_nmr_totals <- cleaned_nmr_panel_b_totals
 cleaned_smr_totals <- cleaned_smr_panel_b_totals
 cleaned_nmr_gender <- cleaned_nmr_panel_b_gender
+cleaned_nmr_gender_specific <- cleaned_nmr_panel_b_gender_specific
 
 # ---------------------------------------------------------------- #
 
@@ -163,9 +217,15 @@ skimr::skim(cleaned_smr_totals)
 
 cat("Completed initial data exploration for overall state totals... \n")
 
-# Lastly, for our national totals split by gender.
+# Now, for our overall totals split by gender.
 Hmisc::describe(cleaned_nmr_gender)
 skimr::skim(cleaned_nmr_gender)
+
+# Lastly, for our age-specific totals split by gender.
+Hmisc::describe(cleaned_nmr_gender_specific)
+skimr::skim(cleaned_nmr_gender_specific)
+
+cat("Completed initial data exploration for national totals by gender... \n")
 
 # ---------------------------------------------------------------- #
 
@@ -177,11 +237,13 @@ skimr::skim(cleaned_nmr_gender)
 saveRDS(cleaned_nmr_totals, file = "output/cleaned_nmr_totals.RDS")
 saveRDS(cleaned_smr_totals, file = "output/cleaned_smr_totals.RDS")
 saveRDS(cleaned_nmr_gender, file = "output/cleaned_nmr_gender.RDS")
+saveRDS(cleaned_nmr_gender_specific, file = "output/cleaned_nmr_gender_specific.RDS")
 
 # CSV format.
 write.csv(cleaned_nmr_totals, "output/cleaned_nmr_totals.csv", row.names = FALSE)
 write.csv(cleaned_smr_totals, "output/cleaned_smr_totals.csv", row.names = FALSE)
 write.csv(cleaned_nmr_gender, "output/cleaned_nmr_gender.csv", row.names = FALSE)
+write.csv(cleaned_nmr_gender_specific, "output/cleaned_nmr_gender_specific.csv", row.names = FALSE)
 
 cat("Saved output dataframes... \n \n \n")
 
