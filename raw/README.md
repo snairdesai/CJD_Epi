@@ -82,6 +82,18 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
   - Produced through minor formatting edits to the above file:
   `Raw and Age-Adjusted National Mortality Rates by Gender and Race/Ethnicity (2007 - 2020).xlsx`
 
+19. `Raw and Age-Specific National Mortality Rates by Age Groups (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-16-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D326F023](https://wonder.cdc.gov/controller/saved/D77/D326F023)
+
+20. `Raw and Age-Adjusted National Mortality Rates by Urbanity (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-23-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D327F134](https://wonder.cdc.gov/controller/saved/D77/D327F134)
+
+21. `Raw and Age-Adjusted National Mortality Rates by Non-Hispanic White vs. Non-Hispanic Black (2007 - 2020).xlsx` 
+  - Generated through CDC Wonder on 02-23-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D327F135](https://wonder.cdc.gov/controller/saved/D77/D327F135)
+
 ---
 
 # Notes
