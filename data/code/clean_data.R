@@ -207,23 +207,19 @@ cleaned_nmr_gender_specific <- cleaned_nmr_panel_b_gender_specific
 # ---------------------------------------------------------------- #
 
 # First, for our overall national totals.
-Hmisc::describe(cleaned_nmr_totals)
 skimr::skim(cleaned_nmr_totals)
 
 cat("Completed initial data exploration for overall national totals... \n")
 
 # Next, for our overall state totals.
-Hmisc::describe(cleaned_smr_totals)
 skimr::skim(cleaned_smr_totals)
 
 cat("Completed initial data exploration for overall state totals... \n")
 
 # Now, for our overall totals split by gender.
-Hmisc::describe(cleaned_nmr_gender)
 skimr::skim(cleaned_nmr_gender)
 
 # Lastly, for our age-specific totals split by gender.
-Hmisc::describe(cleaned_nmr_gender_specific)
 skimr::skim(cleaned_nmr_gender_specific)
 
 cat("Completed initial data exploration for national totals by gender... \n")

@@ -4,27 +4,27 @@ channels:
 dependencies:
 # Add explicit version numbers to freeze a dependency.
 # e.g. - python=3.10.6
-  - python 
-  - pyyaml 
-  - numpy
-  - matplotlib
-  - gitpython
-  - termcolor
-  - colorama
-  - jupyter
-  - linearmodels
-  # - julia 
-  - pip
+  - python=3.11.0
+  - pyyaml=6.0
+  - numpy=1.24.2
+  - matplotlib=3.7.0
+  - gitpython=3.1.31
+  - termcolor=2.2.0
+  - colorama=0.4.6
+  - jupyter=1.0.0
+  - linearmodels=4.27
+  # - julia
+  - pip=23.0.1
   # - pip: # if there is a package available via pip but not with conda, can import like this:
-  - r
-  - r-yaml # import r packages by prepending with "r-"
-  - r-readr
-  - r-tidyverse
-  - r-lubridate
-  - r-data.table
-  - r-skimr
-  - r-hmisc
-  - r-gghighlight
-  - r-patchwork
-  - r-gridExtra
-  - r-RColorBrewer
+  # import r packages by prepending with "r-"
+  - r=4.2
+  - r-yaml=2.3.7
+  - r-readr=2.1.4
+  - r-tidyverse=2.0.0
+  - r-lubridate=1.9.2
+  - r-data.table=1.14.8
+  - r-skimr=2.1.5
+  - r-gghighlight=0.4.0
+  - r-patchwork=1.1.2
+  - r-gridExtra=2.3
+  - r-RColorBrewer=1.1_3
