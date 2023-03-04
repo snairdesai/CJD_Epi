@@ -16,4 +16,6 @@
 
 # Destination    | Source
 lib              | {root}/lib
+
 cleaned_nmr_gender_specific.RDS | {root}/data/output/cleaned_nmr_gender_specific.RDS
+cleaned_nmr_gender.RDS | {root}/data/output/cleaned_nmr_gender.RDS
