@@ -59,7 +59,7 @@ male_age_specific_deaths_plot <- fig_c_dat_males %>%
                                   "#3288BD")) +
     theme_classic() +
     labs(x = "Year", y = "Male Death Rate by Age Group") +
-    theme(legend.position = "bottom")
+   theme(legend.position = "bottom", text = element_text(size = 18))
 
 ggsave("output/male_age_specific_deaths_plot.eps")
 ggsave("output/male_age_specific_deaths_plot.pdf")

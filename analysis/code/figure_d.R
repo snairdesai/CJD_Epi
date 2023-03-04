@@ -55,7 +55,7 @@ female_age_specific_deaths_plot <- fig_d_dat_females %>%
                                   "#3288BD")) +
     theme_classic() +
     labs(x = "Year", y = "Female Death Rate by Age Group") +
-    theme(legend.position = "bottom")
+   theme(legend.position = "bottom", text = element_text(size = 18))
 
 ggsave("output/female_age_specific_deaths_plot.eps")
 ggsave("output/female_age_specific_deaths_plot.pdf")

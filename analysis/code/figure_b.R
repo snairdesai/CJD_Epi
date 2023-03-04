@@ -44,7 +44,7 @@ raw_deaths_by_gender_plot <- fig_b_dat %>%
     scale_color_manual(values = c("brown2", "dodgerblue2")) +
     theme_classic() +
     labs(x = "Year", y = "Age-Adjusted Death Rate") +
-    theme(legend.position = "bottom")
+   theme(legend.position = "bottom", text = element_text(size = 18))
 
 ggsave("output/age_adj_deaths_by_gender_plot.eps")
 ggsave("output/age_adj_deaths_by_gender_plot.pdf")
