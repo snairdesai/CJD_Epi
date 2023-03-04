@@ -1,12 +1,12 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-01-07 13:56:37
-Working directory: /Users/sameernd/Desktop/CJD_Epi/data
+Makelog started: 2023-03-04 11:25:19
+Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
 Version logs successfully written!
-Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/data/code/clean_data.R"`
+Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/code/clean_data.R"`
 Overall national mortality rates for panel A: 1999 - 2006 have been loaded... 
   Year Deaths Population Crude.Rate Crude.Rate.Lower.95..Confidence.Interval
 1 1999    987  279040168    0.35371                                  0.33165
@@ -310,203 +310,6 @@ Age-specific national mortality rates by gender for panel B: 2007 - 2022 have be
 5              2.70%
 6              0.26%
 Completed cleaning process ... 
-cleaned_nmr_totals 
-
- 13  Variables      15  Observations
---------------------------------------------------------------------------------
-time_period 
-       n  missing distinct 
-      15        0       15 
-
-lowest : 2007        2007 - 2020 2008        2009        2010       
-highest: 2016        2017        2018        2019        2020       
-
-2007 (1, 0.067), 2007 - 2020 (1, 0.067), 2008 (1, 0.067), 2009 (1, 0.067), 2010
-(1, 0.067), 2011 (1, 0.067), 2012 (1, 0.067), 2013 (1, 0.067), 2014 (1, 0.067),
-2015 (1, 0.067), 2016 (1, 0.067), 2017 (1, 0.067), 2018 (1, 0.067), 2019 (1,
-0.067), 2020 (1, 0.067)
---------------------------------------------------------------------------------
-raw_death_count 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    754.9    769.3    316.3    324.8 
-     .25      .50      .75      .90      .95 
-   347.0    428.0    458.5    501.2   2061.2 
-
-lowest :  303  322  329  338  356, highest:  458  459  476  518 5662
-                                                                            
-Value        303   322   329   338   356   383   402   428   440   450   458
-Frequency      1     1     1     1     1     1     1     1     1     1     1
-Proportion 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067
-                                  
-Value        459   476   518  5662
-Frequency      1     1     1     1
-Proportion 0.067 0.067 0.067 0.067
---------------------------------------------------------------------------------
-us_time_period_pop 
-       n  missing distinct 
-      15        0       15 
-
-lowest :   301,231,207   304,093,966   306,771,529   308,745,538   311,591,917
-highest:   325,719,178   327,167,434   328,239,523   329,484,123 4,436,490,683
-
-301,231,207 (1, 0.067), 304,093,966 (1, 0.067), 306,771,529 (1, 0.067),
-308,745,538 (1, 0.067), 311,591,917 (1, 0.067), 313,914,040 (1, 0.067),
-316,128,839 (1, 0.067), 318,857,056 (1, 0.067), 321,418,820 (1, 0.067),
-323,127,513 (1, 0.067), 325,719,178 (1, 0.067), 327,167,434 (1, 0.067),
-328,239,523 (1, 0.067), 329,484,123 (1, 0.067), 4,436,490,683 (1, 0.067)
---------------------------------------------------------------------------------
-raw_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    12.72    1.994    10.36    10.60 
-     .25      .50      .75      .90      .95 
-   11.17    12.76    14.03    14.35    14.85 
-
-lowest : 10.059 10.496 10.767 10.819 11.531, highest: 14.000 14.061 14.205 14.447 15.781
-                                                                         
-Value      10.059 10.496 10.767 10.819 11.531 12.292 12.608 12.762 13.449
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value      13.539 14.000 14.061 14.205 14.447 15.781
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-raw_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    11.54    1.922    9.223    9.458 
-     .25      .50      .75      .90      .95 
-   9.992   12.192   12.740   13.051   13.531 
-
-lowest :  8.926  9.350  9.619  9.650 10.333, highest: 12.707 12.773 12.905 13.149 14.422
-                                                                         
-Value       8.926  9.350  9.619  9.650 10.333 11.061 11.375 12.192 12.256
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value      12.430 12.707 12.773 12.905 13.149 14.422
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-raw_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1     13.9    2.095    11.51    11.75 
-     .25      .50      .75      .90      .95 
-   12.36    13.84    15.32    15.65    16.16 
-
-lowest : 11.191 11.643 11.915 11.988 12.728, highest: 15.294 15.349 15.504 15.745 17.140
-                                                                         
-Value      11.191 11.643 11.915 11.988 12.728 13.095 13.523 13.840 14.705
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value      14.821 15.294 15.349 15.504 15.745 17.140
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-raw_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1   0.6009  0.09779   0.4556   0.5808 
-     .25      .50      .75      .90      .95 
-  0.5910   0.6290   0.6585   0.6626   0.6720 
-
-lowest : 0.170 0.578 0.585 0.586 0.596, highest: 0.657 0.660 0.662 0.663 0.693
-                                                                            
-Value      0.170 0.578 0.585 0.586 0.596 0.611 0.628 0.629 0.641 0.654 0.657
-Frequency      1     1     1     1     1     1     1     1     1     1     1
-Proportion 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067
-                                  
-Value      0.660 0.662 0.663 0.693
-Frequency      1     1     1     1
-Proportion 0.067 0.067 0.067 0.067
---------------------------------------------------------------------------------
-age_adj_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       13    0.996    10.46    0.907    9.135    9.340 
-     .25      .50      .75      .90      .95 
-  10.093   10.618   10.916   11.379   11.498 
-
-lowest :  8.947  9.216  9.526  9.975 10.211, highest: 10.692 11.140 11.296 11.434 11.646
-                                                                         
-Value       8.947  9.216  9.526  9.975 10.211 10.480 10.618 10.635 10.692
-Frequency       1      1      1      1      1      2      1      2      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.133  0.067  0.133  0.067
-                                      
-Value      11.140 11.296 11.434 11.646
-Frequency       1      1      1      1
-Proportion  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    9.458   0.9396    8.120    8.287 
-     .25      .50      .75      .90      .95 
-   8.994    9.572   10.143   10.349   10.462 
-
-lowest :  7.941  8.197  8.422  8.921  9.066, highest: 10.086 10.200 10.245 10.418 10.564
-                                                                         
-Value       7.941  8.197  8.422  8.921  9.066  9.460  9.566  9.572  9.589
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value       9.624 10.086 10.200 10.245 10.418 10.564
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    11.47   0.9558    10.15    10.39 
-     .25      .50      .75      .90      .95 
-   10.89    11.65    12.00    12.41    12.53 
-
-lowest :  9.954 10.235 10.631 10.760 11.029, highest: 11.795 12.195 12.347 12.450 12.728
-                                                                         
-Value       9.954 10.235 10.631 10.760 11.029 11.356 11.500 11.646 11.671
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value      11.698 11.795 12.195 12.347 12.450 12.728
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-age_adj_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       14    0.998   0.5124  0.07352   0.4027   0.5148 
-     .25      .50      .75      .90      .95 
-  0.5190   0.5370   0.5470   0.5636   0.5700 
-
-lowest : 0.143 0.514 0.516 0.518 0.520, highest: 0.542 0.552 0.563 0.564 0.584
-                                                                            
-Value      0.143 0.514 0.516 0.518 0.520 0.521 0.536 0.537 0.538 0.542 0.552
-Frequency      1     1     1     1     1     1     1     1     2     1     1
-Proportion 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.067 0.133 0.067 0.067
-                            
-Value      0.563 0.564 0.584
-Frequency      1     1     1
-Proportion 0.067 0.067 0.067
---------------------------------------------------------------------------------
-time_period_death_share 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      15        0       15        1    13.33    13.59    5.588    5.738 
-     .25      .50      .75      .90      .95 
-   6.130    7.560    8.100    8.854   36.405 
-
-lowest :   5.35   5.69   5.81   5.97   6.29, highest:   8.09   8.11   8.41   9.15 100.00
-                                                                         
-Value        5.35   5.69   5.81   5.97   6.29   6.76   7.10   7.56   7.77
-Frequency       1      1      1      1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067  0.067
-                                                    
-Value        7.95   8.09   8.11   8.41   9.15 100.00
-Frequency       1      1      1      1      1      1
-Proportion  0.067  0.067  0.067  0.067  0.067  0.067
---------------------------------------------------------------------------------
-icd_code 
-       n  missing distinct    value 
-      15        0        1    A81.0 
-                
-Value      A81.0
-Frequency     15
-Proportion     1
---------------------------------------------------------------------------------
 ── Data Summary ────────────────────────
                            Values            
 Name                       cleaned_nmr_totals
@@ -549,136 +352,6 @@ Group variables            None
  9   0.519   0.537   0.547    0.584 ▁▁▁▁▇
 10   6.13    7.56    8.1    100     ▇▁▁▁▁
 Completed initial data exploration for overall national totals... 
-cleaned_smr_totals 
-
- 15  Variables      207  Observations
---------------------------------------------------------------------------------
-state 
-       n  missing distinct 
-     207        0       25 
-
-lowest : Arizona    California Colorado   Florida    Georgia   
-highest: Tennessee  Texas      Virginia   Washington Wisconsin 
---------------------------------------------------------------------------------
-state_code 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0       25    0.997    31.23    17.24        6       12 
-     .25      .50      .75      .90      .95 
-      17       34       42       51       53 
-
-lowest :  4  6  8 12 13, highest: 47 48 51 53 55
---------------------------------------------------------------------------------
-time_period 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0       14    0.994     2014    4.548     2008     2008 
-     .25      .50      .75      .90      .95 
-    2011     2014     2018     2019     2020 
-
-lowest : 2007 2008 2009 2010 2011, highest: 2016 2017 2018 2019 2020
-                                                                            
-Value       2007  2008  2009  2010  2011  2012  2013  2014  2015  2016  2017
-Frequency      9    13    13    12    13    12    19    15    16    17    15
-Proportion 0.043 0.063 0.063 0.058 0.063 0.058 0.092 0.072 0.077 0.082 0.072
-                            
-Value       2018  2019  2020
-Frequency     14    22    17
-Proportion 0.068 0.106 0.082
---------------------------------------------------------------------------------
-raw_death_count 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0       36    0.995    18.78    9.788     10.0     10.0 
-     .25      .50      .75      .90      .95 
-    12.0     16.0     21.5     33.0     38.0 
-
-lowest : 10 11 12 13 14, highest: 45 51 52 61 62
---------------------------------------------------------------------------------
-us_time_period_pop 
-       n  missing distinct 
-     207        0      207 
-
-lowest :  3,871,859  4,142,776  4,467,673  4,477,251  4,774,839
-highest: 39,250,017 39,368,078 39,512,223 39,536,653 39,557,045
---------------------------------------------------------------------------------
-raw_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      62      145       62        1    14.68    5.136    8.771    9.646 
-     .25      .50      .75      .90      .95 
-  11.247   14.174   17.058   21.029   21.849 
-
-lowest :  7.376  7.675  8.064  8.749  9.186, highest: 21.590 21.863 24.603 25.119 30.463
---------------------------------------------------------------------------------
-raw_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      205        1    8.956    3.289    4.607    5.383 
-     .25      .50      .75      .90      .95 
-   7.062    8.563   10.622   12.621   13.911 
-
-lowest :  2.806  3.458  4.071  4.155  4.159, highest: 15.691 15.925 16.823 18.857 27.552
---------------------------------------------------------------------------------
-raw_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      206        1    25.41    9.578    13.14    15.12 
-     .25      .50      .75      .90      .95 
-   19.71    24.15    30.69    35.97    40.16 
-
-lowest :  9.824 10.057 10.732 11.421 11.556, highest: 45.245 45.622 46.566 47.509 73.473
---------------------------------------------------------------------------------
-raw_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      202        1    3.896    1.693    1.729    1.881 
-     .25      .50      .75      .90      .95 
-   2.789    3.711    4.884    5.839    6.507 
-
-lowest :  1.420  1.512  1.571  1.577  1.632, highest:  7.078  7.267  7.408  8.006 10.958
---------------------------------------------------------------------------------
-age_adj_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      62      145       62        1    11.82    3.505    7.746    8.651 
-     .25      .50      .75      .90      .95 
-   9.740   11.140   13.518   15.695   16.110 
-
-lowest :  6.702  6.966  7.080  7.740  7.868, highest: 16.041 16.114 19.541 22.134 22.958
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      201        1    7.256    2.466    4.050    4.531 
-     .25      .50      .75      .90      .95 
-   5.845    6.956    8.374    9.642   10.848 
-
-lowest :  1.659  2.376  3.149  3.710  3.767, highest: 13.007 13.520 14.144 15.255 23.563
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      207        1    21.09    7.477    11.94    13.56 
-     .25      .50      .75      .90      .95 
-   15.80    20.43    25.03    29.70    32.35 
-
-lowest :  6.889  8.033  9.663 10.147 10.283, highest: 37.422 38.173 38.329 40.183 62.835
---------------------------------------------------------------------------------
-age_adj_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0      200        1    3.281    1.367    1.586    1.733 
-     .25      .50      .75      .90      .95 
-   2.361    3.158    4.057    4.830    5.122 
-
-lowest : 1.217 1.330 1.340 1.398 1.437, highest: 6.062 6.193 6.248 6.337 9.478
---------------------------------------------------------------------------------
-time_period_death_share 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     207        0       36    0.995   0.3312   0.1731     0.18     0.18 
-     .25      .50      .75      .90      .95 
-    0.21     0.28     0.38     0.58     0.67 
-
-lowest : 0.18 0.19 0.21 0.23 0.25, highest: 0.79 0.90 0.92 1.08 1.10
---------------------------------------------------------------------------------
-icd_code 
-       n  missing distinct    value 
-     207        0        1    A81.0 
-                
-Value      A81.0
-Frequency    207
-Proportion     1
---------------------------------------------------------------------------------
 ── Data Summary ────────────────────────
                            Values            
 Name                       cleaned_smr_totals
@@ -725,125 +398,6 @@ Group variables            None
 11    2.36    3.16    4.06    9.48 ▆▇▂▁▁
 12    0.21    0.28    0.38    1.1  ▇▂▁▁▁
 Completed initial data exploration for overall state totals... 
-cleaned_nmr_gender 
-
- 14  Variables      43  Observations
---------------------------------------------------------------------------------
-time_period 
-       n  missing distinct 
-      43        0       15 
-
-lowest : 2007        2007 - 2020 2008        2009        2010       
-highest: 2016        2017        2018        2019        2020       
-
-2007 (3, 0.070), 2007 - 2020 (1, 0.023), 2008 (3, 0.070), 2009 (3, 0.070), 2010
-(3, 0.070), 2011 (3, 0.070), 2012 (3, 0.070), 2013 (3, 0.070), 2014 (3, 0.070),
-2015 (3, 0.070), 2016 (3, 0.070), 2017 (3, 0.070), 2018 (3, 0.070), 2019 (3,
-0.070), 2020 (3, 0.070)
---------------------------------------------------------------------------------
-gender 
-       n  missing distinct 
-      43        0        3 
-                               
-Value        Both Female   Male
-Frequency      15     14     14
-Proportion  0.349  0.326  0.326
---------------------------------------------------------------------------------
-raw_death_count 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       40        1      395    362.9    157.1    161.6 
-     .25      .50      .75      .90      .95 
-   191.5    227.0    347.0    456.4    474.3 
-
-lowest :  150  153  157  158  161, highest:  458  459  476  518 5662
---------------------------------------------------------------------------------
-us_time_period_pop 
-       n  missing distinct 
-      43        0       43 
-
-lowest :   148,064,854   149,489,951   150,807,454   151,781,326   153,166,353
-highest:   325,719,178   327,167,434   328,239,523   329,484,123 4,436,490,683
---------------------------------------------------------------------------------
-raw_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       43        1    12.72    1.987    10.13    10.43 
-     .25      .50      .75      .90      .95 
-   11.12    12.76    13.96    14.62    15.49 
-
-lowest :  9.989 10.059 10.131 10.162 10.414, highest: 14.639 14.950 15.548 15.781 16.022
---------------------------------------------------------------------------------
-raw_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       43        1    11.17    1.924    8.596    8.856 
-     .25      .50      .75      .90      .95 
-   9.634   11.444   12.343   13.058   13.604 
-
-lowest :  8.406  8.509  8.573  8.805  8.843, highest: 13.096 13.149 13.654 14.070 14.422
---------------------------------------------------------------------------------
-raw_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       41        1    14.27    2.119    11.65    11.78 
-     .25      .50      .75      .90      .95 
-   12.70    14.51    15.60    16.47    17.11 
-
-lowest : 11.191 11.572 11.643 11.752 11.915, highest: 16.483 16.803 17.140 17.441 17.973
---------------------------------------------------------------------------------
-raw_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       42        1   0.7913   0.1723   0.5851   0.5990 
-     .25      .50      .75      .90      .95 
-  0.6585   0.8440   0.9180   0.9434   0.9540 
-
-lowest : 0.170 0.578 0.585 0.586 0.596, highest: 0.944 0.945 0.955 0.966 0.996
---------------------------------------------------------------------------------
-age_adj_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       33    0.999    10.53    1.243    8.947    8.984 
-     .25      .50      .75      .90      .95 
-   9.848   10.618   11.288   11.660   12.345 
-
-lowest :  8.263  8.866  8.947  9.132  9.216, highest: 11.663 11.818 12.404 12.658 12.772
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       43        1    9.195    1.184    7.538    7.668 
-     .25      .50      .75      .90      .95 
-   8.374    9.561    9.947   10.383   10.696 
-
-lowest :  6.910  7.514  7.531  7.603  7.625, highest: 10.418 10.564 10.711 10.835 11.076
---------------------------------------------------------------------------------
-age_adj_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       43        1    11.87    1.386    10.14    10.37 
-     .25      .50      .75      .90      .95 
-   10.89    11.74    12.66    13.35    13.92 
-
-lowest :  9.615  9.954 10.129 10.235 10.364, highest: 13.384 13.454 13.974 14.467 14.605
---------------------------------------------------------------------------------
-age_adj_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       40        1   0.6818   0.1664   0.5162   0.5202 
-     .25      .50      .75      .90      .95 
-  0.5470   0.7030   0.8025   0.8398   0.8639 
-
-lowest : 0.143 0.514 0.516 0.518 0.520, highest: 0.841 0.854 0.865 0.878 0.993
---------------------------------------------------------------------------------
-time_period_death_share 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-      43        0       40        1    6.977    6.409    2.772    2.852 
-     .25      .50      .75      .90      .95 
-   3.385    4.010    6.130    8.062    8.380 
-
-lowest :   2.65   2.70   2.77   2.79   2.84, highest:   8.09   8.11   8.41   9.15 100.00
---------------------------------------------------------------------------------
-icd_code 
-       n  missing distinct    value 
-      43        0        1    A81.0 
-                
-Value      A81.0
-Frequency     43
-Proportion     1
---------------------------------------------------------------------------------
 ── Data Summary ────────────────────────
                            Values            
 Name                       cleaned_nmr_gender
@@ -886,125 +440,6 @@ Group variables            None
  8  10.9    11.7    12.7     14.6   ▃▆▇▅▂
  9   0.547   0.703   0.802    0.993 ▁▁▆▇▃
 10   3.38    4.01    6.13   100     ▇▁▁▁▁
-cleaned_nmr_gender_specific 
-
- 11  Variables      157  Observations
---------------------------------------------------------------------------------
-time_period 
-       n  missing distinct 
-     157        0       15 
-
-lowest : 2007        2007 - 2020 2008        2009        2010       
-highest: 2016        2017        2018        2019        2020       
-
-2007 (11, 0.070), 2007 - 2020 (1, 0.006), 2008 (12, 0.076), 2009 (11, 0.070),
-2010 (11, 0.070), 2011 (11, 0.070), 2012 (10, 0.064), 2013 (11, 0.070), 2014
-(12, 0.076), 2015 (11, 0.070), 2016 (11, 0.070), 2017 (12, 0.076), 2018 (11,
-0.070), 2019 (11, 0.070), 2020 (11, 0.070)
---------------------------------------------------------------------------------
-gender 
-       n  missing distinct 
-     157        0        3 
-                               
-Value        Both Female   Male
-Frequency      15     71     71
-Proportion  0.096  0.452  0.452
---------------------------------------------------------------------------------
-age_groups 
-       n  missing distinct 
-     157        0        6 
-
-lowest : 45-54 years 55-64 years 65-74 years 75-84 years 85+ years  
-highest: 55-64 years 65-74 years 75-84 years 85+ years   All years  
-                                                                      
-Value      45-54 years 55-64 years 65-74 years 75-84 years   85+ years
-Frequency           27          28          28          28           3
-Proportion       0.172       0.178       0.178       0.178       0.019
-                      
-Value        All years
-Frequency           43
-Proportion       0.274
---------------------------------------------------------------------------------
-raw_death_count 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     157        0      105        1    142.6    181.5     15.0     17.6 
-     .25      .50      .75      .90      .95 
-    33.0     62.0    158.0    259.0    407.2 
-
-lowest :   10   11   12   13   14, highest:  458  459  476  518 5662
-                                                                            
-Value          0    50   100   150   200   250   300   350   400   450   500
-Frequency     31    65    18     8    11     9     2     3     2     5     2
-Proportion 0.197 0.414 0.115 0.051 0.070 0.057 0.013 0.019 0.013 0.032 0.013
-                
-Value       5650
-Frequency      1
-Proportion 0.006
-
-For the frequency table, variable is rounded to the nearest 50
---------------------------------------------------------------------------------
-us_time_period_pop 
-       n  missing distinct 
-     157        0      157 
-
-lowest :     1,662,814     2,279,669     4,053,362     5,392,948     5,419,659
-highest:   325,719,178   327,167,434   328,239,523   329,484,123 4,436,490,683
---------------------------------------------------------------------------------
-age_specific_death_rate 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     137       20      136        1    33.95    23.67    10.16    10.71 
-     .25      .50      .75      .90      .95 
-   13.45    31.47    53.12    62.26    68.20 
-
-lowest :  8.811  8.904  9.460  9.985  9.989, highest: 71.360 71.689 71.960 78.234 82.090
---------------------------------------------------------------------------------
-age_specific_death_rate_ci_low 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     157        0      157        1     23.5    18.21    4.288    5.360 
-     .25      .50      .75      .90      .95 
-   9.699   21.155   36.997   46.570   52.575 
-
-lowest :  2.673  2.833  3.166  3.457  3.886, highest: 56.698 57.526 58.068 63.935 65.661
---------------------------------------------------------------------------------
-age_specific_death_rate_ci_hi 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     157        0      155        1    41.09    31.71    11.64    12.04 
-     .25      .50      .75      .90      .95 
-   14.46    37.15    68.71    82.38    86.31 
-
-lowest :   9.576   9.582  10.168  10.608  11.191
-highest:  91.950  92.532  98.372 101.380 110.598
---------------------------------------------------------------------------------
-age_specific_death_rate_se 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     157        0      155        1    4.307    3.735   0.6386   0.8098 
-     .25      .50      .75      .90      .95 
-  0.9450   3.7950   7.0840   8.3710   9.8192 
-
-lowest :  0.170  0.578  0.585  0.586  0.596, highest: 10.270 10.575 11.523 15.196 19.018
---------------------------------------------------------------------------------
-time_period_death_share 
-       n  missing distinct     Info     Mean      Gmd      .05      .10 
-     157        0      105        1    2.519    3.206    0.260    0.312 
-     .25      .50      .75      .90      .95 
-   0.580    1.100    2.790    4.570    7.192 
-
-lowest :   0.18   0.19   0.21   0.23   0.25, highest:   8.09   8.11   8.41   9.15 100.00
-                                                                            
-Value          0     1     2     3     4     5     6     7     8     9   100
-Frequency     32    68    14    12    14     3     4     2     6     1     1
-Proportion 0.204 0.433 0.089 0.076 0.089 0.019 0.025 0.013 0.038 0.006 0.006
-
-For the frequency table, variable is rounded to the nearest 1
---------------------------------------------------------------------------------
-icd_code 
-       n  missing distinct    value 
-     157        0        1    A81.0 
-                
-Value      A81.0
-Frequency    157
-Proportion     1
---------------------------------------------------------------------------------
 ── Data Summary ────────────────────────
                            Values                      
 Name                       cleaned_nmr_gender_specif...
@@ -1040,6 +475,7 @@ Group variables            None
 4 14.5   37.1   68.7   111.  ▇▃▂▃▁
 5  0.945  3.80   7.08   19.0 ▇▅▂▁▁
 6  0.58   1.1    2.79  100   ▇▁▁▁▁
+Completed initial data exploration for national totals by gender... 
 Saved output dataframes... 
  
  
@@ -1047,22 +483,15 @@ Saved output dataframes...
  
  
 
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.3.6      ✔ dplyr   1.0.10
-✔ tibble  3.1.8      ✔ stringr 1.5.0 
-✔ tidyr   1.2.1      ✔ forcats 0.5.2 
-✔ purrr   1.0.0      
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ purrr     1.0.1
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
-Loading required package: timechange
-
-Attaching package: ‘lubridate’
-
-The following objects are masked from ‘package:base’:
-
-    date, intersect, setdiff, union
-
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 Attaching package: ‘data.table’
 
@@ -1079,43 +508,35 @@ The following object is masked from ‘package:purrr’:
 
     transpose
 
-Loading required package: lattice
-Loading required package: survival
-Loading required package: Formula
-
-Attaching package: ‘Hmisc’
-
-The following objects are masked from ‘package:dplyr’:
-
-    src, summarize
-
-The following objects are masked from ‘package:base’:
-
-    format.pval, units
-
-Warning messages:
-1: Problem while computing `raw_death_rate = as.numeric(raw_death_rate) * 100`.
-ℹ NAs introduced by coercion 
-2: Problem while computing `age_adj_death_rate = as.numeric(age_adj_death_rate) *
-100`.
-ℹ NAs introduced by coercion 
-Warning messages:
-1: Problem while computing `raw_death_rate = as.numeric(raw_death_rate) * 100`.
-ℹ NAs introduced by coercion 
-2: Problem while computing `age_adj_death_rate = as.numeric(age_adj_death_rate) *
-100`.
-ℹ NAs introduced by coercion 
 Warning message:
-Problem while computing `age_specific_death_rate =
-as.numeric(age_specific_death_rate) * 100`.
-ℹ NAs introduced by coercion 
+There were 2 warnings in `dplyr::mutate()`.
+The first warning was:
+ℹ In argument: `raw_death_rate = as.numeric(raw_death_rate) * 100`.
+Caused by warning:
+! NAs introduced by coercion
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning. 
 Warning message:
-Problem while computing `age_specific_death_rate =
-as.numeric(age_specific_death_rate) * 100`.
-ℹ NAs introduced by coercion 
+There were 2 warnings in `dplyr::mutate()`.
+The first warning was:
+ℹ In argument: `raw_death_rate = as.numeric(raw_death_rate) * 100`.
+Caused by warning:
+! NAs introduced by coercion
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning. 
+Warning message:
+There was 1 warning in `dplyr::mutate()`.
+ℹ In argument: `age_specific_death_rate = as.numeric(age_specific_death_rate) *
+  100`.
+Caused by warning:
+! NAs introduced by coercion 
+Warning message:
+There was 1 warning in `dplyr::mutate()`.
+ℹ In argument: `age_specific_death_rate = as.numeric(age_specific_death_rate) *
+  100`.
+Caused by warning:
+! NAs introduced by coercion 
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-01-07 13:56:47
-Working directory: /Users/sameernd/Desktop/CJD_Epi/data
+Makelog ended: 2023-03-04 11:25:22
+Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data
 --------------------------------------------------------------------------------

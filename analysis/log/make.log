@@ -1,14 +1,174 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-01-07 13:56:47
-Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
+Makelog started: 2023-03-04 11:25:23
+Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
-WARNING! The following target files have been modified according to git status:
-/Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
 Version logs successfully written!
-Executing command: `Rscript --no-save "/Users/sameernd/Desktop/CJD_Epi/analysis/code/figure_d.R"`
+Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_a.R"`
+National mortality rates by gender have been loaded... 
+  time_period gender raw_death_count us_time_period_pop raw_death_rate
+1        2007 Female             153        153,166,353          9.989
+2        2007   Male             150        148,064,854         10.131
+3        2007   Both             303        301,231,207         10.059
+4        2008 Female             161        154,604,015         10.414
+5        2008   Male             168        149,489,951         11.238
+6        2008   Both             329        304,093,966         10.819
+  raw_death_rate_ci_low raw_death_rate_ci_hi raw_death_rate_se
+1                 8.406               11.572             0.808
+2                 8.509               11.752             0.827
+3                 8.926               11.191             0.578
+4                 8.805               12.022             0.821
+5                 9.539               12.938             0.867
+6                 9.650               11.988             0.596
+  age_adj_death_rate age_adj_death_rate_ci_low age_adj_death_rate_ci_hi
+1              8.263                     6.910                    9.615
+2              9.975                     8.326                   11.624
+3              9.526                     8.422                   10.631
+4              8.947                     7.514                   10.380
+5             12.658                    10.711                   14.605
+6             10.211                     9.066                   11.356
+  age_adj_death_rate_se time_period_death_share icd_code
+1                 0.690                    2.70    A81.0
+2                 0.841                    2.65    A81.0
+3                 0.564                    5.35    A81.0
+4                 0.731                    2.84    A81.0
+5                 0.993                    2.97    A81.0
+6                 0.584                    5.81    A81.0
+Figure A data has been compiled... 
+Figure A has been mapped and exported... 
+ 
+ 
+##### FIGURE A COMPILATION COMPLETED ##### 
+ 
+ 
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+
+Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_b.R"`
+National mortality rates by gender have been loaded... 
+  time_period gender raw_death_count us_time_period_pop raw_death_rate
+1        2007 Female             153        153,166,353          9.989
+2        2007   Male             150        148,064,854         10.131
+3        2007   Both             303        301,231,207         10.059
+4        2008 Female             161        154,604,015         10.414
+5        2008   Male             168        149,489,951         11.238
+6        2008   Both             329        304,093,966         10.819
+  raw_death_rate_ci_low raw_death_rate_ci_hi raw_death_rate_se
+1                 8.406               11.572             0.808
+2                 8.509               11.752             0.827
+3                 8.926               11.191             0.578
+4                 8.805               12.022             0.821
+5                 9.539               12.938             0.867
+6                 9.650               11.988             0.596
+  age_adj_death_rate age_adj_death_rate_ci_low age_adj_death_rate_ci_hi
+1              8.263                     6.910                    9.615
+2              9.975                     8.326                   11.624
+3              9.526                     8.422                   10.631
+4              8.947                     7.514                   10.380
+5             12.658                    10.711                   14.605
+6             10.211                     9.066                   11.356
+  age_adj_death_rate_se time_period_death_share icd_code
+1                 0.690                    2.70    A81.0
+2                 0.841                    2.65    A81.0
+3                 0.564                    5.35    A81.0
+4                 0.731                    2.84    A81.0
+5                 0.993                    2.97    A81.0
+6                 0.584                    5.81    A81.0
+Figure A data has been compiled... 
+Figure B has been mapped and exported... 
+ 
+ 
+##### FIGURE B COMPILATION COMPLETED ##### 
+ 
+ 
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+
+Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_c.R"`
+Age-specific national mortality rates by gender have been loaded... 
+  time_period age_specific_death_rate Gender  Age Groups       Year
+1        2007                  33.793   Male 55-64 years 2007-01-01
+2        2007                  50.533   Male 65-74 years 2007-01-01
+3        2007                  51.920   Male   75+ years 2007-01-01
+4        2008                  25.493   Male 55-64 years 2008-01-01
+5        2008                  65.253   Male 65-74 years 2008-01-01
+6        2008                  71.960   Male   75+ years 2008-01-01
+Figure C data has been compiled... 
+Figure C has been mapped and exported... 
+ 
+ 
+##### FIGURE C COMPILATION COMPLETED ##### 
+ 
+ 
+
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+
+Attaching package: ‘gridExtra’
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+Saving 7 x 7 in image
+Saving 7 x 7 in image
+
+Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_d.R"`
 Age-specific national mortality rates by gender have been loaded... 
   time_period age_specific_death_rate Gender  Age Groups       Year
 1        2007                  31.489 Female 55-64 years 2007-01-01
@@ -25,14 +185,16 @@ Figure D has been mapped and exported...
  
  
 
-── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.3.6      ✔ purrr   1.0.0 
-✔ tibble  3.1.8      ✔ dplyr   1.0.10
-✔ tidyr   1.2.1      ✔ stringr 1.5.0 
-✔ readr   2.1.3      ✔ forcats 0.5.2 
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
 
 Attaching package: ‘gridExtra’
 
@@ -40,11 +202,14 @@ The following object is masked from ‘package:dplyr’:
 
     combine
 
+Warning message:
+Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
 Saving 7 x 7 in image
 Saving 7 x 7 in image
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-01-07 13:56:52
-Working directory: /Users/sameernd/Desktop/CJD_Epi/analysis
+Makelog ended: 2023-03-04 11:25:32
+Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------

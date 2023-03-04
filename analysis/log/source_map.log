@@ -1,3 +1,4 @@
 destination | source
-input/lib | /Users/sameernd/Desktop/CJD_Epi/lib
-input/cleaned_nmr_gender_specific.RDS | /Users/sameernd/Desktop/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
+input/lib | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/lib
+input/cleaned_nmr_gender_specific.RDS | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
+input/cleaned_nmr_gender.RDS | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.RDS
