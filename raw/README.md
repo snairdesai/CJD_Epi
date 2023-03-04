@@ -99,3 +99,6 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
 # Notes
 
 Following from the 2010 PLOS One paper: ["Human Prion Diseases in the United States"](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0008521), we used an ICD-10 code of `B94.8` for all data in years 1999 - 2006, and a code of `A81.0` for all data in years 2007 - 2022.
+
+The `joinpoint_inputs` folder reformats the above `~\raw` files into the format preferred by the National Cancer Institute’s [Joinpoint Regression Program](https://surveillance.cancer.gov/joinpoint/) (version 4.9.1.0). No other edits were made to the raw data.
+
