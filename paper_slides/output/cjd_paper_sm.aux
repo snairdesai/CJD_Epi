@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{xr-hyper}
+\usepackage{scicite}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+
+
+% added amsmath for \boldsymbol
+\usepackage{amsmath, amssymb,amsthm,graphicx,verbatim,url,longtable, multirow}
+\graphicspath{{../output/}{../output-chrono/}}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\usepackage{subfloat}
+%\usepackage{array}
+\usepackage{makecell}
+\usepackage{booktabs,caption}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[capposition=top]{floatrow}
+\usepackage[colorlinks]{hyperref}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={blue},
+    filecolor={blue}, 
+    urlcolor={blue},
+    citecolor={blue},
+    hyperfootnotes={true}
+}
+%\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,hyperfootnotes=true]{hyperref}
+
+% Allow a line break at hyphens in a URL
+\usepackage{xurl}
+
+% for \sisetup
+\usepackage{siunitx}
+
+\usepackage{adjustbox}
+%\usepackage{subcaption}
+%\usepackage{graphicx}
+\usepackage{rotating}
+%\usepackage{colortbl}
+%\usepackage{hhline}
+%\usepackage{calc}
+%\usepackage{threeparttable}
+%\usepackage{xspace}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{nameref}
+%\usepackage{import}
+%\usepackage[online]{threeparttablex}
+
+% Copy margins from main file
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+
+% add for column type P
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+% Scalars
+% \input{analysis/primary/output/leebound_zero_scalars_fb.tex}
+% \input{analysis/primary/output/leebound_zero_scalars_ig.tex}
+
+\begin{document}
+
+\appendix
+\setcounter{page}{1}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{equation}{0}
+\setcounter{footnote}{0}
+% HA changed the below to have this be Section.Subsection so that the links to subsection numbers work in the body of the paper.
+\renewcommand{\thesubsection}{{\thesection}.\arabic{subsection}}
+%\renewcommand{\thesubsection}{S\arabic{subsection}}
+\renewcommand\thetable{S\arabic{table}}
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand{\thepage}{S-\arabic{page}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefootnote}{F\arabic{footnote}}
+
+
+
+%\begin{figure}[!h]
+ %   \centering
+%    \includegraphics[width=0.3\textwidth]{output/scimaglogo.jpg}
+%\end{figure}
+\begin{center}
+{\Large \textbf{Supplemental Materials}}\\
+\vspace{1em}
+\Large{\textbf{The Effects of Social Media on the 2020 Election}} \\
+\vspace{1em}
+% tk insert authors
+\vspace{1em}
+\normalsize{Correspondence to:  gentzkow@stanford.edu}
+\end{center}
+
+\tableofcontents
+\clearpage
+
+%%%%%%%%%%%%%% MATERIALS AND METHODS %%%%%%%%%%%%%%
+\section{Materials and Methods\label{sm:mm}}
+
+\bibliographystyle{paper/paper/Science}
+% \bibliography{paper/paper/deactivation_bib}
+
+
+\end{document}
