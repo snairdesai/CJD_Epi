@@ -1,0 +1,3 @@
+"Model"	"# Joinpoints"	"# Observations"	"# Parameters"	"D.F."	"SSE"	"SSE"
+1	0	8	2	6	       1.2020641	      -1.3755410
+2	1	8	4	4	       0.9560150	      -1.0314977

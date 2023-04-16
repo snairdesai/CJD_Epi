@@ -1,5 +1,5 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-03-04 11:31:00
+Makelog started: 2023-04-16 13:37:18
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data
 --------------------------------------------------------------------------------
 Input links successfully created!
@@ -484,9 +484,9 @@ Saved output dataframes...
  
 
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ purrr     1.0.1
+✔ dplyr     1.1.1     ✔ purrr     1.0.1
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
@@ -537,6 +537,6 @@ Caused by warning:
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-03-04 11:31:04
+Makelog ended: 2023-04-16 13:37:21
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data
 --------------------------------------------------------------------------------
