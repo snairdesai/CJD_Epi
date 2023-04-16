@@ -1,10 +1,13 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-03-04 11:31:04
+Makelog started: 2023-04-16 13:37:21
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
+WARNING! The following target files have been modified according to git status:
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.RDS
 Version logs successfully written!
 Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_a.R"`
 National mortality rates by gender have been loaded... 
@@ -45,9 +48,9 @@ Figure A has been mapped and exported...
  
 
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ dplyr     1.1.1     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -106,9 +109,9 @@ Figure B has been mapped and exported...
  
 
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ dplyr     1.1.1     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -139,9 +142,9 @@ Figure C has been mapped and exported...
  
 
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ dplyr     1.1.1     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -172,9 +175,9 @@ Figure D has been mapped and exported...
  
 
 ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ dplyr     1.1.1     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
 ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
 ✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
@@ -195,7 +198,19 @@ Saving 7 x 7 in image
 Saving 7 x 7 in image
 
 Output logs successfully written!
+WARNING! Certain files tracked by git exceed the config size limit (0.5 MB). See below for list of files.
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_race/nhwhite/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_race/nhblack/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agecrude_race/nhwhite/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agecrude_race/nhblack/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agespec_overall/65-74/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agespec_overall/75plus/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agespec_overall/55-64/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agecrude_gender/male/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/agecrude_gender/female/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_gender/male/export.graph.bmp
+/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_gender/female/export.graph.bmp
 --------------------------------------------------------------------------------
-Makelog ended: 2023-03-04 11:31:12
+Makelog ended: 2023-04-16 13:37:28
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
