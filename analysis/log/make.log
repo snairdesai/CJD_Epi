@@ -1,13 +1,10 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-04-16 13:37:21
+Makelog started: 2023-04-16 14:32:31
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
-WARNING! The following target files have been modified according to git status:
-/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
-/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.RDS
 Version logs successfully written!
 Executing command: `Rscript --no-save "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/code/figure_a.R"`
 National mortality rates by gender have been loaded... 
@@ -211,6 +208,6 @@ WARNING! Certain files tracked by git exceed the config size limit (0.5 MB). See
 /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_gender/male/export.graph.bmp
 /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/joinpoint_output/ageadj_gender/female/export.graph.bmp
 --------------------------------------------------------------------------------
-Makelog ended: 2023-04-16 13:37:28
+Makelog ended: 2023-04-16 14:32:38
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
