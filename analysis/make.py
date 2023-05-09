@@ -45,6 +45,7 @@ gs.run_r(PATHS, program = 'code/figure_a.R')
 gs.run_r(PATHS, program = 'code/figure_b.R')
 gs.run_r(PATHS, program = 'code/figure_c.R')
 gs.run_r(PATHS, program = 'code/figure_d.R')
+gs.run_stata(PATHS, program = 'code/sig_tests.do')
 
 ### LOG OUTPUTS
 gs.log_files_in_output(PATHS)

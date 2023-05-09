@@ -51,4 +51,10 @@ ggsave("output/raw_deaths_by_gender_plot.pdf")
 
 cat("Figure A has been mapped and exported... \n \n \n")
 
+# RDS format.
+saveRDS(fig_a_dat, file = "output/raw_deaths_gender.RDS")
+
+# CSV format.
+write.csv(fig_a_dat, "output/raw_deaths_gender.csv", row.names = FALSE)
+
 cat("##### FIGURE A COMPILATION COMPLETED ##### \n \n \n")
