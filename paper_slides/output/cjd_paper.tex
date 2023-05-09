@@ -65,6 +65,7 @@
 \usepackage{float}
 \usepackage{xurl}
 \usepackage{import}
+\usepackage{boldline}
 \usepackage[online]{threeparttablex}
 \usepackage[colorlinks]{hyperref}
 \hypersetup{
@@ -74,6 +75,8 @@
     urlcolor={blue},
     citecolor={blue}
 }
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \graphicspath{ {./analysis/output/} }
 
@@ -167,15 +170,15 @@ Phone: 410-955-3416}
 \section*{Introduction}
 
 \par \bigskip
-\noindent Creutzfeldt–Jakob disease (CJD) is a rapidly progressive and universally fatal neurologic condition characterized by cognitive and motor dysfunction.1 Prior research on CJD in the US demonstrated a stable incidence from 1979 - 2006, though recent trends are not well described.2 The incidence of sporadic CJD (sCJD), the most common variant of CJD, is higher among older patients.3 Due to demographic trends worldwide towards increasing aging populations, the epidemiology of CJD is evolving.4 In this study we examined extended death certificate data from 2007 - 2020 in order to better understand current trends of CJD in the US.
+\noindent Creutzfeldt–Jakob disease (CJD) is a rapidly progressive and universally fatal neurologic condition characterized by cognitive and motor dysfunction\cite{NatRev}. Prior research on CJD in the US demonstrated a stable incidence from 1979 - 2006, though recent trends are not well described\cite{PLoSOne}. The incidence of sporadic CJD (sCJD), the most common variant of CJD, is higher among older patients\cite{JNuerol}. Due to demographic trends worldwide towards increasing aging populations, the epidemiology of CJD is evolving\cite{SciRep}. In this study we examined extended death certificate data from 2007 - 2020 in order to better understand current trends of CJD in the US.
 
 \section*{Methods}
 
 \par \bigskip
-\noindent This study used data from the Centers for Disease Control and Prevention (CDC) WONDER database.5 ICD-10 codes on death certificates were used from 2007 - 2020. Given the clinical course of CJD, many studies suggest death certificates are an accurate measure of incidence.6
+\noindent This study used data from the Centers for Disease Control and Prevention (CDC) WONDER database\cite{CDCWonder}. ICD-10 codes on death certificates were used from 2007 - 2020. Given the clinical course of CJD, many studies suggest death certificates are an accurate measure of incidence\cite{NeuroEpi}.
 
 \par \bigskip
-\noindent Joinpoint regression modeling (using the National Cancer Institute’s Joinpoint Regression Program, version 4.9.1.0)7, was used to identify and characterize inflection points in trends. A BIC3 analysis model with homoscedastic errors and estimates for first-order autocorrelation was fit to longitudinal data to pull crude and age-adjusted annual percentage changes across a range of demographic groups (see \textbf{Table 1}). Additional details on data collection and methodology are available in the \textbf{Supplemental Materials}.
+\noindent Joinpoint regression modeling (using the National Cancer Institute’s Joinpoint Regression Program \cite{StatMed, Joinpoint}, version 4.9.1.0), was used to identify and characterize inflection points in trends. A Weighted BIC analysis model with estimates for first-order autocorrelation was fit to longitudinal data to pull crude and age-adjusted annual percentage changes across a range of demographic groups (see \textbf{Table \ref{table:joinpoint-analysis}}). Additional details on data collection and methodology are available in the \textbf{Supplemental Materials}.
 
 \par \bigskip
 \noindent This study was determined to not constitute human subjects research by the Johns Hopkins Medicine Institutional Review Board.
@@ -184,49 +187,83 @@ Phone: 410-955-3416}
 
 \section*{Results}
 
+\newpage
+
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{analysis/output/raw_deaths_by_gender_plot.pdf}
-    \caption{Figure \textbf{a}: Crude Number of Deaths: Male, Female}
+    \caption{Crude Number of Deaths: Male, Female}
     \label{fig:crude_deaths_by_gender}
 \end{figure}
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{analysis/output/age_adj_deaths_by_gender_plot.pdf}
-    \caption{Figure \textbf{b}: Age-Adjusted Mortality: Male, Female}
+    \caption{Age-Adjusted Mortality: Male, Female}
     \label{fig:age_adj_deaths_by_gender}
 \end{figure}
 
+\newpage
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{analysis/output/male_age_specific_deaths_plot.pdf}
-    \caption{Figure \textbf{c}: Age-Specific Mortality: Male}
+    \caption{Age-Specific Mortality: Male}
     \label{fig:male_age_specific_deaths}
 \end{figure}
+
+\newpage
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.5]{analysis/output/female_age_specific_deaths_plot.pdf}
-    \caption{Figure \textbf{d}: Age-Specific Mortality: Female}
+    \caption{Age-Specific Mortality: Female}
     \label{fig:female_age_specific_deaths}
 \end{figure}
 
-TODO: Table 1.
+\newpage
+
+\begin{table}[ht]
+\centering
+\caption{Joinpoint Analysis: Creutzfeldt--Jakob Disease Mortality, by Demographics}
+\label{table:joinpoint-analysis}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|C{3.5cm}|C{2.2cm}|C{2.8cm}|C{2.2cm}|C{2.8cm}|C{2.2cm}|}
+\hline
+\textbf{Demographic Group} & \textbf{Time Interval} & \textbf{Crude AAPC (95\% CI)} & \textbf{Crude p-value} & \textbf{Age Adjusted AAPC (95\% CI)} & \textbf{Age-Adjusted p-value} \\
+\hline
+\multicolumn{1}{|l|}{\textit{Age Groups}} & \multicolumn{5}{l|}{} \\
+\hline
+55--64 Years Old & 2007--2020 & 1.7 (0.6, 2.9) & 0.006 & -- & -- \\
+\hline
+65--74 Years Old & 2007--2020 & 1.5 (0.6, 2.4) & 0.004 & -- & -- \\
+\hline
+75+ Years Old    & 2007--2020 & 1.4 (-0.2, 3.0) & 0.087 & -- & -- \\
+\hline
+\multicolumn{1}{|l|}{\textit{Gender}} & \multicolumn{5}{l|}{} \\
+\hline
+Male             & 2007--2020 & 3.0 (2.4, 3.7) & 0.000 & 1.0 (0.2, 1.8) & 0.023 \\
+\hline
+Female           & 2007--2020 & 3.6 (2.4, 4.7) & 0.000 & 1.8 (1.3, 2.3) & 0.000 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+\newpage
 
 \section*{Discussion}
  
 \par \bigskip
-\noindent Our findings demonstrate that the incidence of CJD has risen considerably in recent years in the US, disproportionately affecting older patients and female patients. These results align closely with recent data from Japan and may be largely attributed to demographic changes in recent years.4 Our study’s main limitation is a reliance on death certificate data for estimating CJD incidence.
+\noindent Our findings demonstrate that the incidence of CJD has risen considerably in recent years in the US, disproportionately affecting older patients and female patients. These results align closely with recent data from Japan and may be largely attributed to demographic changes in recent years\cite{SciRep}. Our study’s main limitation is a reliance on death certificate data for estimating CJD incidence.
 
 \par \bigskip
-\noindent This data may be subject to miscoding or misdiagnosis, though existing research supports the use of death certificates for understanding CJD epidemiology.6 This analysis underscores the changing landscape of CJD in the US in recent years and suggests a need for close surveillance among the aging US population.  
+\noindent This data may be subject to miscoding or misdiagnosis, though existing research supports the use of death certificates for understanding CJD epidemiology\cite{NeuroEpi}. This analysis underscores the changing landscape of CJD in the US in recent years and suggests a need for close surveillance among the aging US population.  
 
 
 % Bibliography
-\bibliographystyle{paper/paper/Science}
-\bibliography{paper/paper/deactivation_bib}
+\bibliographystyle{paper_slides/output/Science}
+\bibliography{paper_slides/output/cjd_paper_bib}
 
 
 \end{document}
