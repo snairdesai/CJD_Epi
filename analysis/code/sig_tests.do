@@ -3,8 +3,8 @@
 * Note: t-test for "rates" = (rate1-rate2)/sqrt(SE1^2+SE2^2).
 
 global RAW "/Users/sameernd/Desktop/CJD_Epi/raw"
-global DATA "/Users/sameernd/Desktop/CJD_Epi/data/output"
-global OUTPUT "/Users/sameernd/Desktop/CJD_Epi/analysis/output"
+global DATA "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output"
+global OUTPUT "/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis/output"
 
 ************
 ** GENDER **
@@ -60,4 +60,41 @@ reshape wide Crude*, i(TenYearAgeGroupsCode) j(Year)
 gen t_test_agegroup = (CrudeRate2020 - CrudeRate2007)/sqrt(CrudeRateStandardError2020^2 + CrudeRateStandardError2007^2)
 
 export delimited using "$OUTPUT/t_tests_agegroup.csv", replace
+
+***************************
+** GENDER AND AGE GROUPS **
+***************************
+
+import delimited using "$DATA/cleaned_nmr_gender_specific.csv", varnames(1) clear
+
+* Clean data
+keep time_period gender age_groups age_specific_death_rate age_specific_death_rate_se
+
+replace age_specific_death_rate = "" if age_specific_death_rate == "NA"
+destring age_specific_death_rate, replace
+
+drop if gender == "Both"
+
+* Keep first and last year 
+keep if time_period == "2007" | time_period == "2020"
+
+drop if age_groups == "All years" | age_groups == "25-34 years" | /// 
+	age_groups == "35-44 years" | age_groups == "45-54 years" | ///
+	age_groups == "85+ years" | age_groups == ""
+	
+replace age_groups = "75+ years" if age_groups == "75-84 years"
+replace gender = "f" if gender == "Female"
+replace gender = "m" if gender == "Male"
+
+reshape wide age_specific_death*, i(age_groups gender) j(time_period) string
+
+* Rates by age bins (and gender): 
+
+gen t_test_agegroup_gender = (age_specific_death_rate2020 - age_specific_death_rate2007)/sqrt(age_specific_death_rate_se2020^2 + age_specific_death_rate_se2007^2) if gender == "f"
+
+replace t_test_agegroup_gender = (age_specific_death_rate2020 - age_specific_death_rate2007)/sqrt(age_specific_death_rate_se2020^2 + age_specific_death_rate_se2007^2) if gender == "m"
+
+export delimited using "$OUTPUT/t_tests_agegroup_gender.csv", replace
+
+
 
