@@ -42,6 +42,7 @@ raw_deaths_by_gender_plot <- fig_a_dat %>%
     geom_line(aes(linetype = `Gender`), size = 2) +
     scale_linetype_manual(values = c("solid", "solid")) +
     scale_color_manual(values = c("brown2", "dodgerblue2")) +
+    scale_x_date(date_minor_breaks = "1 year") +
     theme_classic() +
     labs(x = "Year", y = "Raw Death Count") +
    theme(legend.position = "bottom", text = element_text(size = 18))

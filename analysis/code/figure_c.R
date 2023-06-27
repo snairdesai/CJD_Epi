@@ -55,6 +55,7 @@ male_age_specific_deaths_plot <- fig_c_dat_males %>%
     scale_color_manual(values = c("#D53E4F", "#FC8D59",
                                   "#FEE08B", "#99D594",
                                   "#3288BD")) +
+    scale_x_date(date_minor_breaks = "1 year") +
     theme_classic() +
     labs(x = "Year", y = "Male Death Rate by Age Group") +
    theme(legend.position = "bottom", text = element_text(size = 18))
