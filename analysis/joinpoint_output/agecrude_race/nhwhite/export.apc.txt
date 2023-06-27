@@ -1,2 +1,0 @@
-"Model"	"Segment"	"Segment Start"	"Segment End"	"APC"	"APC 95% LCL"	"APC 95% UCL"	"APC Significant"	"Test Statistic"	"P-Value"
-0	0	2007	2020	3.2	2.7	3.8	1	13.5	0.000

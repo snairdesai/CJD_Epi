@@ -1,2 +1,0 @@
-"Joinpoint Model"	"AAPC Index"	"Start Obs"	"End Obs"	"AAPC"	"AAPC C.I. Low"	"AAPC C.I. High"	"Statistically Significant (0=No  1=Yes)"	"Test Statistic"	"P-Value"
-0	0	2007	2020	3.2	2.7	3.8	1	13.5	0.000
