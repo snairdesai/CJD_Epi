@@ -42,13 +42,15 @@ raw_deaths_by_gender_plot <- fig_a_dat %>%
     geom_line(aes(linetype = `Gender`), size = 2) +
     scale_linetype_manual(values = c("solid", "solid")) +
     scale_color_manual(values = c("brown2", "dodgerblue2")) +
-    scale_x_date(date_minor_breaks = "1 year") +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
     theme_classic() +
     labs(x = "Year", y = "Raw Death Count") +
-   theme(legend.position = "bottom", text = element_text(size = 18))
+    theme(legend.position = "bottom", text = element_text(size = 18),
+    legend.background = element_rect(color = "black", fill = NA, size = 1))
+    # expand_limits(y = 0)
 
-ggsave("output/raw_deaths_by_gender_plot.eps")
-ggsave("output/raw_deaths_by_gender_plot.pdf")
+ggsave("output/raw_deaths_by_gender_plot.eps", width = 14, height = 8)
+ggsave("output/raw_deaths_by_gender_plot.pdf", width = 14, height = 8)
 
 cat("Figure A has been mapped and exported... \n \n \n")
 

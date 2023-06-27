@@ -55,13 +55,15 @@ male_age_specific_deaths_plot <- fig_c_dat_males %>%
     scale_color_manual(values = c("#D53E4F", "#FC8D59",
                                   "#FEE08B", "#99D594",
                                   "#3288BD")) +
-    scale_x_date(date_minor_breaks = "1 year") +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
     theme_classic() +
     labs(x = "Year", y = "Male Death Rate by Age Group") +
-   theme(legend.position = "bottom", text = element_text(size = 18))
+    theme(legend.position = "bottom", text = element_text(size = 18),
+    legend.background = element_rect(color = "black", fill = NA, size = 1)) +
+    expand_limits(y = 0)
 
-ggsave("output/male_age_specific_deaths_plot.eps")
-ggsave("output/male_age_specific_deaths_plot.pdf")
+ggsave("output/male_age_specific_deaths_plot.eps", width = 14, height = 8)
+ggsave("output/male_age_specific_deaths_plot.pdf", width = 14, height = 8)
 
 cat("Figure C has been mapped and exported... \n \n \n")
 
