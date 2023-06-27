@@ -95,14 +95,14 @@ clean_raw_dfs <- function(raw_dat, icd_input) {
         # formatting numeric values.
         dplyr::mutate(icd_code = icd_input,
                       us_time_period_pop = format(as.numeric(us_time_period_pop), big.mark = ","),
-                      raw_death_rate = as.numeric(raw_death_rate) * 100,
-                      raw_death_rate_ci_low = as.numeric(raw_death_rate_ci_low) * 100,
-                      raw_death_rate_ci_hi = as.numeric(raw_death_rate_ci_hi) * 100,
-                      raw_death_rate_se = as.numeric(raw_death_rate_se) * 100,
-                      age_adj_death_rate = as.numeric(age_adj_death_rate) * 100,
-                      age_adj_death_rate_ci_low = as.numeric(age_adj_death_rate_ci_low) * 100,
-                      age_adj_death_rate_ci_hi = as.numeric(age_adj_death_rate_ci_hi) * 100,
-                      age_adj_death_rate_se = as.numeric(age_adj_death_rate_se) * 100,
+                      raw_death_rate = as.numeric(raw_death_rate),
+                      raw_death_rate_ci_low = as.numeric(raw_death_rate_ci_low),
+                      raw_death_rate_ci_hi = as.numeric(raw_death_rate_ci_hi),
+                      raw_death_rate_se = as.numeric(raw_death_rate_se),
+                      age_adj_death_rate = as.numeric(age_adj_death_rate),
+                      age_adj_death_rate_ci_low = as.numeric(age_adj_death_rate_ci_low),
+                      age_adj_death_rate_ci_hi = as.numeric(age_adj_death_rate_ci_hi),
+                      age_adj_death_rate_se = as.numeric(age_adj_death_rate_se),
                       time_period_death_share = readr::parse_number(time_period_death_share)) %>%
 
         # Reordering dataframe rows so totals across time periods are at bottom.
@@ -140,10 +140,10 @@ clean_specific_dfs <- function(raw_dat, icd_input) {
         # formatting numeric values.
         dplyr::mutate(icd_code = icd_input,
                       us_time_period_pop = format(as.numeric(us_time_period_pop), big.mark = ","),
-                      age_specific_death_rate = as.numeric(age_specific_death_rate) * 100,
-                      age_specific_death_rate_ci_low = as.numeric(age_specific_death_rate_ci_low) * 100,
-                      age_specific_death_rate_ci_hi = as.numeric(age_specific_death_rate_ci_hi) * 100,
-                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se) * 100,
+                      age_specific_death_rate = as.numeric(age_specific_death_rate),
+                      age_specific_death_rate_ci_low = as.numeric(age_specific_death_rate_ci_low),
+                      age_specific_death_rate_ci_hi = as.numeric(age_specific_death_rate_ci_hi),
+                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se),
                       time_period_death_share = readr::parse_number(time_period_death_share)) %>%
 
         # Reordering dataframe rows so totals across time periods are at bottom.
