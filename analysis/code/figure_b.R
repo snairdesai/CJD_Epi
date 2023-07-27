@@ -23,7 +23,6 @@ library(gridExtra)
 # Importing dataframe.
 cleaned_nmr_gender <- readRDS("input/cleaned_nmr_gender.RDS")
 cat("National mortality rates by gender have been loaded... \n")
-head(cleaned_nmr_gender)
 
 # Rearranging data for figure.
 fig_b_dat <- cleaned_nmr_gender %>%
@@ -33,7 +32,7 @@ fig_b_dat <- cleaned_nmr_gender %>%
     dplyr::rename(`Gender` = gender) %>%
     dplyr::mutate(`Year` = as.Date(ISOdate(time_period, 1, 1)))
 
-cat("Figure A data has been compiled... \n")
+cat("Figure B data has been compiled... \n")
 
 # Plotting line plot of relevant statistic.
 raw_deaths_by_gender_plot <- fig_b_dat %>%
@@ -42,12 +41,15 @@ raw_deaths_by_gender_plot <- fig_b_dat %>%
     geom_line(aes(linetype = `Gender`), size = 2) +
     scale_linetype_manual(values = c("solid", "solid")) +
     scale_color_manual(values = c("brown2", "dodgerblue2")) +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y") +
     theme_classic() +
     labs(x = "Year", y = "Age-Adjusted Death Rate") +
-   theme(legend.position = "bottom", text = element_text(size = 18))
+    theme(legend.position = "bottom", text = element_text(size = 18),
+    legend.background = element_rect(color = "black", fill = NA, size = 1))
+    # expand_limits(y = 0)
 
-ggsave("output/age_adj_deaths_by_gender_plot.eps")
-ggsave("output/age_adj_deaths_by_gender_plot.pdf")
+ggsave("output/age_adj_deaths_by_gender_plot.eps", width = 14, height = 8)
+ggsave("output/age_adj_deaths_by_gender_plot.pdf", width = 14, height = 8)
 
 cat("Figure B has been mapped and exported... \n \n \n")
 

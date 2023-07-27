@@ -1,2 +1,0 @@
-"Model"	"#Obs"	"#Param"	"DF"	"SSE"	"MSE"	"Auto Corr"	"Segment"	"Joinpoint"	"Joinpoint 95% LCL"	"Joinpoint 95% UCL"	"Intercept Estimate"	"Intercept Std Error"	"Intercept Test Statistic"	"Intercept P-Value"	"Slope Estimate"	"Slope Std Error"	"Slope Test Statistic"	"Slope P-Value"	"SlopeChg Estimate"	"SlopeChg Std Error"	"SlopeChg Test Statistic"	"SlopeChg P-Value"
-0	14	2	12	27.111299	2.259275	-0.646363	0	NA	NA	NA	-30.253509	8.331795	-3.631091	0.003444	0.014777	0.004136	3.572439	0.003835	NA	NA	NA	NA
