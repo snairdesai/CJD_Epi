@@ -23,7 +23,6 @@ library(gridExtra)
 # Importing dataframe.
 cleaned_nmr_gender <- readRDS("input/cleaned_nmr_gender.RDS")
 cat("National mortality rates by gender have been loaded... \n")
-head(cleaned_nmr_gender)
 
 # Rearranging data for figure.
 fig_a_dat <- cleaned_nmr_gender %>%

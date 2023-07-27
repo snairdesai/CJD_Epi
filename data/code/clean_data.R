@@ -27,37 +27,29 @@ library(skimr)
 # First, for overall national and state totals.
 raw_nmr_panel_a_totals <- read.csv("input/nmr_panel_a_totals.csv")
 cat("Overall national mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
-head(raw_nmr_panel_a_totals)
 
 raw_nmr_panel_b_totals <- read.csv("input/nmr_panel_b_totals.csv")
 cat("Overall national mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
-head(raw_nmr_panel_b_totals)
 
 raw_smr_panel_a_totals <- read.csv("input/smr_panel_a_totals.csv")
 cat("Overall state mortality rates for panel A: 1999 - 2006 have been loaded... \n") 
-head(raw_smr_panel_a_totals)
 
 raw_smr_panel_b_totals <- read.csv("input/smr_panel_b_totals.csv")
 cat("Overall state mortality rates for panel B: 2007 - 2022 have been loaded... \n") 
-head(raw_smr_panel_b_totals)
 
 # Next, for age-adjusted totals by gender.
 raw_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender.csv")
 cat("National mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
-head(raw_nmr_panel_a_gender)
 
 raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
-head(raw_nmr_panel_b_gender)
 
 # Next, for age-specific totals by gender.
 specific_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender_specific.csv")
 cat("Age-specific national mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
-head(specific_nmr_panel_a_gender)
 
 specific_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender_specific.csv")
 cat("Age-specific national mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
-head(specific_nmr_panel_b_gender)
 
 # ---------------------------------------------------------------- #
 
