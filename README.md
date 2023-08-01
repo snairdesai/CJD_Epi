@@ -8,6 +8,7 @@ The co-authors for this project are:
 - Sameer Nair-Desai (Institutional Affiliations: Stanford University & Meridian Collective; Contact: [sameernd@stanford.edu](mailto:sameernd@stanford.edu); Website: [https://sameernairdesai.wordpress.com/](https://sameernairdesai.wordpress.com/))
 - John A. Romley (Institutional Affiliations: USC Schaeffer Center, USC Price School of Public Policy, & USC School of Pharmacy; Website: [https://priceschool.usc.edu/people/john-a-romley/](https://priceschool.usc.edu/people/john-a-romley/))
 - John C. Probasco (Institutional Affiliations: Johns Hopkins University School of Medicine; Website: [https://www.hopkinsmedicine.org/profiles/details/john-probasco](https://www.hopkinsmedicine.org/profiles/details/john-probasco))
+- Alison Gemmill (Institutional Affiliations: Johns Hopkins University Bloomberg School of Public Health; Website: [https://publichealth.jhu.edu/faculty/3843/alison-gemmill](https://publichealth.jhu.edu/faculty/3843/alison-gemmill))
 
 # Template Instructions
 
