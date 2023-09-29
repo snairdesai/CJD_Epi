@@ -120,8 +120,7 @@ clean_specific_dfs <- function(raw_dat, icd_input) {
                       age_specific_death_rate = `Crude.Rate`,
                       age_specific_death_rate_ci_low = `Crude.Rate.Lower.95..Confidence.Interval`,
                       age_specific_death_rate_ci_hi = `Crude.Rate.Upper.95..Confidence.Interval`,
-                      age_specific_death_rate_se = `Crude.Rate.Standard.Error`,
-                      time_period_death_share = `X..of.Total.Deaths`) %>%
+                      age_specific_death_rate_se = `Crude.Rate.Standard.Error`) %>%
 
         # Replacing missing values with NAs.
         dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
@@ -133,8 +132,7 @@ clean_specific_dfs <- function(raw_dat, icd_input) {
                       age_specific_death_rate = as.numeric(age_specific_death_rate),
                       age_specific_death_rate_ci_low = as.numeric(age_specific_death_rate_ci_low),
                       age_specific_death_rate_ci_hi = as.numeric(age_specific_death_rate_ci_hi),
-                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se),
-                      time_period_death_share = readr::parse_number(time_period_death_share)) %>%
+                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se)) %>%
 
         # Reordering dataframe rows so totals across time periods are at bottom.
         dplyr::arrange(time_period %in% match_list)

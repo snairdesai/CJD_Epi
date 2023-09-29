@@ -7,10 +7,8 @@
 import excel using input/raw_nmr_gender.xlsx, firstrow clear
 
 * Clean data
-drop Notes YearCode Deaths *95Con* ofTotalDeaths
+drop Notes YearCode Deaths *95Con*
 drop if Year == .
-drop if Population == "Not Applicable"
-replace CrudeRate = "" if CrudeRate == "Unreliable"
 destring Population, replace force
 destring CrudeRateStandardError, replace force
 
@@ -94,7 +92,6 @@ keep if age_groups == "55-64 years" | ///
 	
 replace age_groups = "75+" if age_groups == "75-84 years"
 
-replace age_specific_death_rate = "" if age_specific_death_rate == "NA"
 destring age_specific_death_rate, replace
 destring age_specific_death_rate_se, replace
 

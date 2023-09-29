@@ -1,13 +1,11 @@
 --------------------------------------------------------------------------------
-Makelog started: 2023-09-29 11:26:09
+Makelog started: 2023-09-29 12:07:53
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
 Input links successfully created!
 External links successfully created!
 Source logs successfully written!
 WARNING! The following target files have been modified according to git status:
-/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.csv
-/Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.RDS
 /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.RDS
 /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.csv
 Version logs successfully written!
@@ -177,26 +175,20 @@ Notes:
 . *****************
 . 
 . import excel using input/raw_nmr_gender.xlsx, firstrow clear
-(14 vars, 269 obs)
+(13 vars, 127 obs)
 
 . 
 . * Clean data
-. drop Notes YearCode Deaths *95Con* ofTotalDeaths
+. drop Notes YearCode Deaths *95Con*
 
 . drop if Year == .
-(0 observations deleted)
-
-. drop if Population == "Not Applicable"
-(28 observations deleted)
-
-. replace CrudeRate = "" if CrudeRate == "Unreliable"
-(147 real changes made)
+(1 observation deleted)
 
 . destring Population, replace force
-Population: all characters numeric; replaced as long
+Population already numeric; no replace
 
 . destring CrudeRateStandardError, replace force
-CrudeRateStandardError: all characters numeric; replaced as double
+CrudeRateStandardError already numeric; no replace
 
 . 
 . * Converting standard errors to standard deviations.
@@ -204,19 +196,18 @@ CrudeRateStandardError: all characters numeric; replaced as double
 
 . 
 . destring CrudeRate, replace
-CrudeRate: all characters numeric; replaced as double
-(147 missing values generated)
+CrudeRate already numeric; no replace
 
 . 
 . * Keep first and last year 
 . keep if Year == 2007 | Year == 2020
-(206 observations deleted)
+(108 observations deleted)
 
 . 
 . keep if TenYearAgeGroups == "55-64 years" | ///
 >         TenYearAgeGroups == "65-74 years" | ///
 >         TenYearAgeGroups == "75-84 years"
-(23 observations deleted)
+(6 observations deleted)
 
 .         
 . replace TenYearAgeGroups = "75+" if TenYearAgeGroups == "75-84 years"
@@ -343,7 +334,7 @@ file output/t_tests_gender.csv saved
 . import delimited using input/cleaned_nmr_gender_specific.csv, varnames(1) cle
 > ar
 (encoding automatically selected: ISO-8859-2)
-(11 vars, 269 obs)
+(11 vars, 127 obs)
 
 . 
 . * Clean data
@@ -353,7 +344,6 @@ file output/t_tests_gender.csv saved
 . 
 . * Converting sample size to numeric.
 . gen population_numeric = real(subinstr(us_time_period_pop, ",", "", .))
-(28 missing values generated)
 
 . format population_numeric %12.0f
 
@@ -361,21 +351,18 @@ file output/t_tests_gender.csv saved
 . keep if age_groups == "55-64 years" | ///
 >         age_groups == "65-74 years" | ///
 >         age_groups == "75-84 years"
-(185 observations deleted)
+(43 observations deleted)
 
 .         
 . replace age_groups = "75+" if age_groups == "75-84 years"
 (28 real changes made)
 
 . 
-. replace age_specific_death_rate = "" if age_specific_death_rate == "NA"
-(0 real changes made)
-
 . destring age_specific_death_rate, replace
-age_specific_death_rate: all characters numeric; replaced as double
+age_specific_death_rate already numeric; no replace
 
 . destring age_specific_death_rate_se, replace
-age_specific_death_rate_se: all characters numeric; replaced as double
+age_specific_death_rate_se already numeric; no replace
 
 . 
 . * Converting standard errors to standard deviations.
@@ -389,7 +376,7 @@ age_specific_death_rate_se: all characters numeric; replaced as double
 . 
 . * Keep first and last year
 . tostring time_period, replace force
-time_period was int now str4
+time_period already string; no replace
 
 . keep if time_period == "2007" | time_period == "2020"
 (72 observations deleted)
@@ -448,6 +435,6 @@ end of do-file
 
 Output logs successfully written!
 --------------------------------------------------------------------------------
-Makelog ended: 2023-09-29 11:26:17
+Makelog ended: 2023-09-29 12:08:13
 Working directory: /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/analysis
 --------------------------------------------------------------------------------
