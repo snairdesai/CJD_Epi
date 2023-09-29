@@ -17,8 +17,8 @@
 # Destination    | Source
 lib              | {root}/lib
 
-cleaned_nmr_gender_specific.RDS | {root}/data/output/cleaned_nmr_gender_specific.RDS
-cleaned_nmr_gender.RDS | {root}/data/output/cleaned_nmr_gender.RDS
-cleaned_nmr_gender_specific.csv | {root}/data/output/cleaned_nmr_gender_specific.csv
-cleaned_nmr_gender.csv | {root}/data/output/cleaned_nmr_gender.csv
-raw_nmr_gender.xlsx | {root}/raw/Raw and Age-Specific National Mortality Rates by Gender (2007 - 2020).xlsx
+cleaned_nmr_gender_specific.RDS       | {root}/data/output/cleaned_nmr_gender_specific.RDS
+cleaned_nmr_gender.RDS                | {root}/data/output/cleaned_nmr_gender.RDS
+cleaned_nmr_gender_specific.csv       | {root}/data/output/cleaned_nmr_gender_specific.csv
+cleaned_nmr_gender.csv                | {root}/data/output/cleaned_nmr_gender.csv
+raw_nmr_gender.xlsx                   | {root}/raw/Raw and Age-Specific National Mortality Rates by Gender per 1M (2007 - 2020).xlsx

@@ -94,6 +94,21 @@ CDC data for evolution of Creutzfeldt-Jakob national mortality rates (1999 - 202
   - Generated through CDC Wonder on 02-23-2023.
   - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D327F135](https://wonder.cdc.gov/controller/saved/D77/D327F135)
 
+22. `Raw and Age-Specific National Mortality Rates by Gender per 1M (2007 - 2020).xlsx`
+  - Generated through CDC Wonder on 09-13-2023.
+  - Search Query: [https://wonder.cdc.gov/controller/saved/D77/D355F914](https://wonder.cdc.gov/controller/saved/D77/D355F914)
+
+23. `nmr_panel_b_gender_specific_perm.csv` 
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Specific National Mortality Rates by Gender per 1M (2007 - 2020).xlsx`
+
+24. `Raw and Age-Adjusted National Mortality Rates by Gender per 1M (2007 - 2020).xlsx`
+  - Generated through CDC Wonder on 09-18-2023.
+
+25. `nmr_panel_b_gender_perm.csv`
+  - Produced through minor formatting edits to the above file:
+  `Raw and Age-Adjusted National Mortality Rates by Gender per 1M (2007 - 2020).xlsx`
+
 ---
 
 # Notes

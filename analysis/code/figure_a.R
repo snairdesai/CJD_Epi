@@ -27,8 +27,7 @@ cat("National mortality rates by gender have been loaded... \n")
 # Rearranging data for figure.
 fig_a_dat <- cleaned_nmr_gender %>%
     dplyr::select(time_period, raw_death_count, gender) %>%
-    dplyr::filter(time_period != "2007 - 2020" &
-                  gender != "Both") %>%
+    dplyr::filter(time_period != "2007 - 2020" & gender != "Both" & gender != "") %>%
     dplyr::rename(`Gender` = gender) %>%
     dplyr::mutate(`Year` = as.Date(ISOdate(time_period, 1, 1)))
 
