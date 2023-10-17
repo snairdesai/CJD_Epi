@@ -41,14 +41,14 @@ cat("Overall state mortality rates for panel B: 2007 - 2022 have been loaded... 
 raw_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender.csv")
 cat("National mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 
-raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender.csv")
+raw_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender_perm.csv")
 cat("National mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 
 # Next, for age-specific totals by gender.
 specific_nmr_panel_a_gender <- read.csv("input/nmr_panel_a_gender_specific.csv")
 cat("Age-specific national mortality rates by gender for panel A: 1999 - 2006 have been loaded... \n") 
 
-specific_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender_specific.csv")
+specific_nmr_panel_b_gender <- read.csv("input/nmr_panel_b_gender_specific_perm.csv")
 cat("Age-specific national mortality rates by gender for panel B: 2007 - 2022 have been loaded... \n") 
 
 # ---------------------------------------------------------------- #
@@ -77,8 +77,7 @@ clean_raw_dfs <- function(raw_dat, icd_input) {
                       age_adj_death_rate = `Age.Adjusted.Rate`,
                       age_adj_death_rate_ci_low = `Age.Adjusted.Rate.Lower.95..Confidence.Interval`,
                       age_adj_death_rate_ci_hi = `Age.Adjusted.Rate.Upper.95..Confidence.Interval`,
-                      age_adj_death_rate_se = `Age.Adjusted.Rate.Standard.Error`,
-                      time_period_death_share = `X..of.Total.Deaths`) %>%
+                      age_adj_death_rate_se = `Age.Adjusted.Rate.Standard.Error`) %>%
 
         # Replacing missing values with NAs.
         dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
@@ -94,8 +93,7 @@ clean_raw_dfs <- function(raw_dat, icd_input) {
                       age_adj_death_rate = as.numeric(age_adj_death_rate),
                       age_adj_death_rate_ci_low = as.numeric(age_adj_death_rate_ci_low),
                       age_adj_death_rate_ci_hi = as.numeric(age_adj_death_rate_ci_hi),
-                      age_adj_death_rate_se = as.numeric(age_adj_death_rate_se),
-                      time_period_death_share = readr::parse_number(time_period_death_share)) %>%
+                      age_adj_death_rate_se = as.numeric(age_adj_death_rate_se)) %>%
 
         # Reordering dataframe rows so totals across time periods are at bottom.
         dplyr::arrange(time_period %in% match_list)
@@ -122,8 +120,7 @@ clean_specific_dfs <- function(raw_dat, icd_input) {
                       age_specific_death_rate = `Crude.Rate`,
                       age_specific_death_rate_ci_low = `Crude.Rate.Lower.95..Confidence.Interval`,
                       age_specific_death_rate_ci_hi = `Crude.Rate.Upper.95..Confidence.Interval`,
-                      age_specific_death_rate_se = `Crude.Rate.Standard.Error`,
-                      time_period_death_share = `X..of.Total.Deaths`) %>%
+                      age_specific_death_rate_se = `Crude.Rate.Standard.Error`) %>%
 
         # Replacing missing values with NAs.
         dplyr::mutate_if(is.character, list(~na_if(., "Unrestricted"))) %>%
@@ -135,8 +132,7 @@ clean_specific_dfs <- function(raw_dat, icd_input) {
                       age_specific_death_rate = as.numeric(age_specific_death_rate),
                       age_specific_death_rate_ci_low = as.numeric(age_specific_death_rate_ci_low),
                       age_specific_death_rate_ci_hi = as.numeric(age_specific_death_rate_ci_hi),
-                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se),
-                      time_period_death_share = readr::parse_number(time_period_death_share)) %>%
+                      age_specific_death_rate_se = as.numeric(age_specific_death_rate_se)) %>%
 
         # Reordering dataframe rows so totals across time periods are at bottom.
         dplyr::arrange(time_period %in% match_list)

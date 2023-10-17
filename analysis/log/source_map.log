@@ -4,4 +4,4 @@ input/cleaned_nmr_gender_specific.RDS | /Users/sameernair-desai/Desktop/IndRes/C
 input/cleaned_nmr_gender.RDS | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.RDS
 input/cleaned_nmr_gender_specific.csv | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender_specific.csv
 input/cleaned_nmr_gender.csv | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/data/output/cleaned_nmr_gender.csv
-input/raw_nmr_gender.xlsx | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/raw/Raw and Age-Specific National Mortality Rates by Gender (2007 - 2020).xlsx
+input/raw_nmr_gender.xlsx | /Users/sameernair-desai/Desktop/IndRes/CJD_Epi/raw/Raw and Age-Specific National Mortality Rates by Gender per 1M (2007 - 2020).xlsx
